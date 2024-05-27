@@ -13,30 +13,31 @@ spec:
             Host: localhost:9000
             User-Agent: curl/7.88.1
         body: ""
-        timestamp: 2024-05-27T13:24:36.1698712+05:30
+        timestamp: 2024-05-27T16:24:35.335051713+05:30
     resp:
         status_code: 200
         header:
             Connection: keep-alive
             Content-Length: "34"
             Content-Type: application/json; charset=utf-8
-            Date: Mon, 27 May 2024 07:54:36 GMT
+            Date: Mon, 27 May 2024 10:54:35 GMT
             Etag: W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
             Keep-Alive: timeout=5
+            Vary: Origin
             X-Powered-By: Express
         body: '{"data":"Service up and running!"}'
         status_message: OK
         proto_major: 0
         proto_minor: 0
-        timestamp: 2024-05-27T13:24:38.259675817+05:30
+        timestamp: 2024-05-27T16:24:37.415313772+05:30
     objects: []
     assertions:
         noise:
             header.Date: []
-    created: 1716796478
+    created: 1716807277
 curl: |
     curl --request GET \
       --url http://localhost:9000/ \
-      --header 'Host: localhost:9000' \
       --header 'User-Agent: curl/7.88.1' \
       --header 'Accept: */*' \
+      --header 'Host: localhost:9000' \

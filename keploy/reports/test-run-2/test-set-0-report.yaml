@@ -1,15 +1,15 @@
 version: api.keploy.io/v1beta1
 name: test-set-0-report
-status: PASSED
+status: FAILED
 success: 1
-failure: 0
-total: 1
+failure: 1
+total: 2
 tests:
     - kind: Http
       name: test-set-0
       status: PASSED
-      started: 1716796666
-      completed: 1716796666
+      started: 1716809530
+      completed: 1716809530
       test_case_path: /Users/shivamsouravjha/samples-typescript/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/shivamsouravjha/samples-typescript/node-express-graphql-template/keploy/test-set-0
       test_case_id: test-1
@@ -23,16 +23,17 @@ tests:
             Host: localhost:9000
             User-Agent: curl/7.88.1
         body: ""
-        timestamp: 2024-05-27T13:24:36.1698712+05:30
+        timestamp: 2024-05-27T16:24:35.335051713+05:30
       resp:
         status_code: 200
         header:
             Connection: keep-alive
             Content-Length: "34"
             Content-Type: application/json; charset=utf-8
-            Date: Mon, 27 May 2024 07:57:46 GMT
+            Date: Mon, 27 May 2024 11:32:10 GMT
             Etag: W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
             Keep-Alive: timeout=5
+            Vary: Origin
             X-Powered-By: Express
         body: '{"data":"Service up and running!"}'
         status_message: ""
@@ -49,24 +50,6 @@ tests:
         headers_result:
             - normal: true
               expected:
-                key: Date
-                value:
-                    - Mon, 27 May 2024 07:54:36 GMT
-              actual:
-                key: Date
-                value:
-                    - Mon, 27 May 2024 07:57:46 GMT
-            - normal: true
-              expected:
-                key: Etag
-                value:
-                    - W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
-              actual:
-                key: Etag
-                value:
-                    - W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
-            - normal: true
-              expected:
                 key: Keep-Alive
                 value:
                     - timeout=5
@@ -74,6 +57,15 @@ tests:
                 key: Keep-Alive
                 value:
                     - timeout=5
+            - normal: true
+              expected:
+                key: Vary
+                value:
+                    - Origin
+              actual:
+                key: Vary
+                value:
+                    - Origin
             - normal: true
               expected:
                 key: X-Powered-By
@@ -110,10 +102,167 @@ tests:
                 key: Content-Type
                 value:
                     - application/json; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Mon, 27 May 2024 10:54:35 GMT
+              actual:
+                key: Date
+                value:
+                    - Mon, 27 May 2024 11:32:10 GMT
+            - normal: true
+              expected:
+                key: Etag
+                value:
+                    - W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
+              actual:
+                key: Etag
+                value:
+                    - W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
         body_result:
             - normal: true
               type: JSON
               expected: '{"data":"Service up and running!"}'
               actual: '{"data":"Service up and running!"}'
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: FAILED
+      started: 1716809530
+      completed: 1716809530
+      test_case_path: /Users/shivamsouravjha/samples-typescript/node-express-graphql-template/keploy/test-set-0
+      mock_path: /Users/shivamsouravjha/samples-typescript/node-express-graphql-template/keploy/test-set-0
+      test_case_id: test-2
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "286"
+            Content-Type: application/json
+            Host: localhost:9000
+            Postman-Token: be407d69-ab37-445f-84b9-5833c523e727
+            User-Agent: PostmanRuntime/7.39.0
+        body: '{"query":"query Aggregate {\n  aggregate (startDate: \"2007-12-03T10:15:30Z\", endDate:\"2020-10-03T10:15:30Z\", category:\"Baby\") {\n    max {\n      purchasedProductsPrice\n    }\n    total {\n      purchasedProductsPrice\n    }\n    count {\n      purchasedProducts\n    }\n  }\n}"}'
+        timestamp: 2024-05-27T16:24:39.711591998+05:30
+      resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "129"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 11:32:10 GMT
+            Etag: W/"81-epkWJVVzPzSTezLwQCfZDcT6xrA"
+            Keep-Alive: timeout=5
+            Vary: Origin
+            X-Powered-By: Express
+        body: |
+            {"data":{"aggregate":{"max":{"purchasedProductsPrice":0},"total":{"purchasedProductsPrice":0},"count":{"purchasedProducts":0}}}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: false
+              expected:
+                key: Etag
+                value:
+                    - W/"c0-r78BvGGvpJ9mHtb7d+YKBUL35NQ"
+              actual:
+                key: Etag
+                value:
+                    - W/"81-epkWJVVzPzSTezLwQCfZDcT6xrA"
+            - normal: true
+              expected:
+                key: Vary
+                value:
+                    - Origin
+              actual:
+                key: Vary
+                value:
+                    - Origin
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Mon, 27 May 2024 10:54:39 GMT
+              actual:
+                key: Date
+                value:
+                    - Mon, 27 May 2024 11:32:10 GMT
+            - normal: false
+              expected:
+                key: Content-Length
+                value:
+                    - "192"
+              actual:
+                key: Content-Length
+                value:
+                    - "129"
+            - normal: true
+              expected:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+              actual:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+            - normal: true
+              expected:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+              actual:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+        body_result:
+            - normal: false
+              type: JSON
+              expected: |
+                {"errors":["relation \"purchased_products\" does not exist"],"data":{"aggregate":{"max":{"purchasedProductsPrice":null},"total":{"purchasedProductsPrice":0},"count":{"purchasedProducts":0}}}}
+              actual: |
+                {"data":{"aggregate":{"max":{"purchasedProductsPrice":0},"total":{"purchasedProductsPrice":0},"count":{"purchasedProducts":0}}}}
         dep_result: []
 test_set: test-set-0
