@@ -31,7 +31,7 @@ jobs:
         chmod +x /home/runner/work/node-express-graphql-template/node-express-graphql-template/.github/workflows/testa_workflow_scripts/keploy.sh
         /home/runner/work/node-express-graphql-template/node-express-graphql-template/.github/workflows/testa_workflow_scripts/keploy.sh
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.SECRETS }}
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
