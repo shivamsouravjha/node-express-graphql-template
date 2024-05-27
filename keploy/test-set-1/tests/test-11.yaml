@@ -1,0 +1,59 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-11
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip,deflate,br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I
+            Connection: keep-alive
+            Content-Length: "286"
+            Content-Type: application/json
+            Host: localhost:9000
+            Keploy-Test-Id: test-10
+            Postman-Token: bacec6a3-4f8e-4c3c-9db4-1f749d421ec2
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query Aggregate {\n  aggregate (startDate: \"2007-12-03T10:15:30Z\", endDate:\"2020-10-03T10:15:30Z\", category:\"Baby\") {\n    max {\n      purchasedProductsPrice\n    }\n    total {\n      purchasedProductsPrice\n    }\n    count {\n      purchasedProducts\n    }\n  }\n}"}'
+        timestamp: 2024-05-27T18:03:20.688049409+05:30
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "192"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 12:33:20 GMT
+            Etag: W/"c0-r78BvGGvpJ9mHtb7d+YKBUL35NQ"
+            Keep-Alive: timeout=5
+            Vary: Origin
+            X-Powered-By: Express
+        body: |
+            {"errors":["relation \"purchased_products\" does not exist"],"data":{"aggregate":{"max":{"purchasedProductsPrice":null},"total":{"purchasedProductsPrice":0},"count":{"purchasedProducts":0}}}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-27T18:03:22.885719021+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716813202
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Keploy-Test-Id: test-10' \
+      --header 'Accept-Encoding: gzip,deflate,br' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I' \
+      --header 'Connection: keep-alive' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: bacec6a3-4f8e-4c3c-9db4-1f749d421ec2' \
+      --header 'Host: localhost:9000' \
+      --header 'Content-Type: application/json' \
+      --data '{"query":"query Aggregate {\n  aggregate (startDate: \"2007-12-03T10:15:30Z\", endDate:\"2020-10-03T10:15:30Z\", category:\"Baby\") {\n    max {\n      purchasedProductsPrice\n    }\n    total {\n      purchasedProductsPrice\n    }\n    count {\n      purchasedProducts\n    }\n  }\n}"}'

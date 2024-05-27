@@ -1,0 +1,57 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip,deflate,br
+            Connection: keep-alive
+            Content-Length: "257"
+            Content-Type: application/json
+            Host: localhost:9000
+            Keploy-Test-Id: test-1
+            Postman-Token: 83ba5a5f-30a2-4c57-b1a1-62ff2cde8659
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"mutation CreateUser {\n  signUp(email: \"sagar@test.com\", password: \"sagar_password\", firstName: \"sagar\", lastName: \"tomar\") {\n    id\n    email\n    firstName\n    lastName\n    token\n    createdAt\n    deletedAt\n    updatedAt\n  }\n}"}'
+        timestamp: 2024-05-27T18:03:20.543854481+05:30
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "72"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 12:33:20 GMT
+            Etag: W/"48-rXCZRBhvMwQvcOeyZPbxjKca/1w"
+            Keep-Alive: timeout=5
+            Vary: Origin
+            X-Powered-By: Express
+        body: |
+            {"errors":["relation \"users\" does not exist"],"data":{"signUp":null}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-27T18:03:22.682189965+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716813202
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'Host: localhost:9000' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Accept-Encoding: gzip,deflate,br' \
+      --header 'Keploy-Test-Id: test-1' \
+      --header 'Postman-Token: 83ba5a5f-30a2-4c57-b1a1-62ff2cde8659' \
+      --header 'Accept: */*' \
+      --data '{"query":"mutation CreateUser {\n  signUp(email: \"sagar@test.com\", password: \"sagar_password\", firstName: \"sagar\", lastName: \"tomar\") {\n    id\n    email\n    firstName\n    lastName\n    token\n    createdAt\n    deletedAt\n    updatedAt\n  }\n}"}'

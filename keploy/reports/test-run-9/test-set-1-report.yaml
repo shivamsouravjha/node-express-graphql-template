@@ -1,0 +1,148 @@
+version: api.keploy.io/v1beta1
+name: test-set-1-report
+status: USER_ABORT
+success: 1
+failure: 1
+total: 13
+tests:
+    - kind: Http
+      name: test-set-1
+      status: PASSED
+      started: 1716813343
+      completed: 1716813343
+      test_case_path: /Users/shivamsouravjha/samples-typescript/node-express-graphql-template/keploy/test-set-1
+      mock_path: /Users/shivamsouravjha/samples-typescript/node-express-graphql-template/keploy/test-set-1
+      test_case_id: test-1
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip,deflate,br
+            Connection: keep-alive
+            Content-Length: "257"
+            Content-Type: application/json
+            Host: localhost:9000
+            Keploy-Test-Id: test-1
+            Postman-Token: 83ba5a5f-30a2-4c57-b1a1-62ff2cde8659
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"mutation CreateUser {\n  signUp(email: \"sagar@test.com\", password: \"sagar_password\", firstName: \"sagar\", lastName: \"tomar\") {\n    id\n    email\n    firstName\n    lastName\n    token\n    createdAt\n    deletedAt\n    updatedAt\n  }\n}"}'
+        timestamp: 2024-05-27T18:03:20.543854481+05:30
+      resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "72"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 12:35:43 GMT
+            Etag: W/"48-rXCZRBhvMwQvcOeyZPbxjKca/1w"
+            Keep-Alive: timeout=5
+            Vary: Origin
+            X-Powered-By: Express
+        body: |
+            {"errors":["relation \"users\" does not exist"],"data":{"signUp":null}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+            - normal: true
+              expected:
+                key: Etag
+                value:
+                    - W/"48-rXCZRBhvMwQvcOeyZPbxjKca/1w"
+              actual:
+                key: Etag
+                value:
+                    - W/"48-rXCZRBhvMwQvcOeyZPbxjKca/1w"
+            - normal: true
+              expected:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+              actual:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+            - normal: true
+              expected:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+              actual:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "72"
+              actual:
+                key: Content-Length
+                value:
+                    - "72"
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Mon, 27 May 2024 12:33:20 GMT
+              actual:
+                key: Date
+                value:
+                    - Mon, 27 May 2024 12:35:43 GMT
+            - normal: true
+              expected:
+                key: Vary
+                value:
+                    - Origin
+              actual:
+                key: Vary
+                value:
+                    - Origin
+        body_result:
+            - normal: true
+              type: JSON
+              expected: |
+                {"errors":["relation \"users\" does not exist"],"data":{"signUp":null}}
+              actual: |
+                {"errors":["relation \"users\" does not exist"],"data":{"signUp":null}}
+        dep_result: []
+test_set: test-set-1

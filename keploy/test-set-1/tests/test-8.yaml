@@ -1,0 +1,59 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-8
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip,deflate,br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I
+            Connection: keep-alive
+            Content-Length: "438"
+            Content-Type: application/json
+            Host: localhost:9000
+            Keploy-Test-Id: test-7
+            Postman-Token: 34c9b2f4-51b3-4c3c-8abb-8095176a3c84
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query Suppliers {\n  suppliers (offset: 0, limit:10){\n    edges {\n      node {\n        id\n        name\n        addressId\n        addresses {\n          edges {\n            node {\n              id\n              address1\n            }\n          }\n        }\n        products {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}"}'
+        timestamp: 2024-05-27T18:03:20.660811186+05:30
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "79"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 12:33:20 GMT
+            Etag: W/"4f-mA1fJSrY1N5ABawxGjCPb5byCUc"
+            Keep-Alive: timeout=5
+            Vary: Origin
+            X-Powered-By: Express
+        body: |
+            {"errors":["relation \"suppliers\" does not exist"],"data":{"suppliers":null}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-27T18:03:22.683259198+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716813202
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Host: localhost:9000' \
+      --header 'Accept: */*' \
+      --header 'Connection: keep-alive' \
+      --header 'Postman-Token: 34c9b2f4-51b3-4c3c-8abb-8095176a3c84' \
+      --header 'Accept-Encoding: gzip,deflate,br' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I' \
+      --header 'Content-Type: application/json' \
+      --header 'Keploy-Test-Id: test-7' \
+      --data '{"query":"query Suppliers {\n  suppliers (offset: 0, limit:10){\n    edges {\n      node {\n        id\n        name\n        addressId\n        addresses {\n          edges {\n            node {\n              id\n              address1\n            }\n          }\n        }\n        products {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}"}'

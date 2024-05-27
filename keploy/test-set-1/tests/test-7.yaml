@@ -1,0 +1,59 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-7
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip,deflate,br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I
+            Connection: keep-alive
+            Content-Length: "432"
+            Content-Type: application/json
+            Host: localhost:9000
+            Keploy-Test-Id: test-6
+            Postman-Token: d7882821-1987-4c18-8e27-4b2c731bdefc
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query Address {\n  addresses (offset:0, limit: 10){\n    edges {\n      node {\n        id\n        address1\n        address2\n        suppliers {\n          edges {\n            node{\n              id\n              name\n            }\n          }\n        }\n        stores {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}"}'
+        timestamp: 2024-05-27T18:03:20.649608046+05:30
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "79"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 12:33:20 GMT
+            Etag: W/"4f-W1zIp95c0jWNcaygVhhFrUQhZNA"
+            Keep-Alive: timeout=5
+            Vary: Origin
+            X-Powered-By: Express
+        body: |
+            {"errors":["relation \"addresses\" does not exist"],"data":{"addresses":null}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-27T18:03:22.683098136+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716813202
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'Keploy-Test-Id: test-6' \
+      --header 'Content-Type: application/json' \
+      --header 'Accept-Encoding: gzip,deflate,br' \
+      --header 'Host: localhost:9000' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I' \
+      --header 'Connection: keep-alive' \
+      --header 'Accept: */*' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Postman-Token: d7882821-1987-4c18-8e27-4b2c731bdefc' \
+      --data '{"query":"query Address {\n  addresses (offset:0, limit: 10){\n    edges {\n      node {\n        id\n        address1\n        address2\n        suppliers {\n          edges {\n            node{\n              id\n              name\n            }\n          }\n        }\n        stores {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}"}'

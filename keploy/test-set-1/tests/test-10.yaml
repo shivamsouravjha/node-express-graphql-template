@@ -1,0 +1,59 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-10
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip,deflate,br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I
+            Connection: keep-alive
+            Content-Length: "169"
+            Content-Type: application/json
+            Host: localhost:9000
+            Keploy-Test-Id: test-12
+            Postman-Token: 9de40f94-b6cb-4c10-beea-dae4a48ea7ff
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"mutation UpdateProduct {\n  updateProduct (id:2000, name:\"updated name\", category:\"b\", amount:1000) {\n    id\n    name\n    category\n    amount\n  }\n}"}'
+        timestamp: 2024-05-27T18:03:20.792302923+05:30
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "71"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 12:33:20 GMT
+            Etag: W/"47-eDahXY+FVYCX/G0xS7e6p8ccX54"
+            Keep-Alive: timeout=5
+            Vary: Origin
+            X-Powered-By: Express
+        body: |
+            {"errors":["Failed to update products"],"data":{"updateProduct":null}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-27T18:03:22.885384358+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716813202
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Keploy-Test-Id: test-12' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I' \
+      --header 'Host: localhost:9000' \
+      --header 'Accept: */*' \
+      --header 'Accept-Encoding: gzip,deflate,br' \
+      --header 'Content-Type: application/json' \
+      --header 'Postman-Token: 9de40f94-b6cb-4c10-beea-dae4a48ea7ff' \
+      --data '{"query":"mutation UpdateProduct {\n  updateProduct (id:2000, name:\"updated name\", category:\"b\", amount:1000) {\n    id\n    name\n    category\n    amount\n  }\n}"}'

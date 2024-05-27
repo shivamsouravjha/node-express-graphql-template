@@ -1,15 +1,15 @@
 version: api.keploy.io/v1beta1
 name: test-set-0-report
-status: FAILED
-success: 7
-failure: 2
+status: PASSED
+success: 9
+failure: 0
 total: 13
 tests:
     - kind: Http
       name: test-set-0
       status: PASSED
-      started: 1716375308
-      completed: 1716375309
+      started: 1716381728
+      completed: 1716381729
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-1
@@ -36,12 +36,12 @@ tests:
             Connection: keep-alive
             Content-Length: "628"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:09 GMT
-            Etag: W/"274-KNwHAIX1B6ecZEaqCwl5Y/rdsrQ"
+            Date: Wed, 22 May 2024 12:42:09 GMT
+            Etag: W/"274-uQ+/mTluXwbKxwew2sHJsYdQAZ8"
             Keep-Alive: timeout=5
             X-Powered-By: Express
         body: |
-            {"data":{"signUp":{"id":"100","email":"sagar@test.com","firstName":"sagar","lastName":"tomar","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWRBdCI6IjIwMjQtMDUtMjJUMTA6NDk6MjIuNjI0WiIsImlkIjoxMDAsImZpcnN0TmFtZSI6InNhZ2FyIiwibGFzdE5hbWUiOiJ0b21hciIsImVtYWlsIjoic2FnYXJAdGVzdC5jb20iLCJwYXNzd29yZCI6IjU1ZjQ1MTg2OWI3OTZlMmFlZmU3ODA2ZjA0YTJlMzBkIiwidXBkYXRlZEF0IjoiMjAyNC0wNS0yMlQxMDo0OToyMi4wMzlaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2Mzc1MzA5LCJleHAiOjE3MTY0NjE3MDl9.1BWEYxZPr6YcJixMZDKj6nb8tdfUNQjzlpuNg3yd1GU","createdAt":"2024-05-22T10:49:22.624Z","deletedAt":null,"updatedAt":"2024-05-22T10:49:22.039Z"}}}
+            {"data":{"signUp":{"id":"100","email":"sagar@test.com","firstName":"sagar","lastName":"tomar","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWRBdCI6IjIwMjQtMDUtMjJUMTA6NDk6MjIuNjI0WiIsImlkIjoxMDAsImZpcnN0TmFtZSI6InNhZ2FyIiwibGFzdE5hbWUiOiJ0b21hciIsImVtYWlsIjoic2FnYXJAdGVzdC5jb20iLCJwYXNzd29yZCI6IjU1ZjQ1MTg2OWI3OTZlMmFlZmU3ODA2ZjA0YTJlMzBkIiwidXBkYXRlZEF0IjoiMjAyNC0wNS0yMlQxMDo0OToyMi4wMzlaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2MzgxNzI5LCJleHAiOjE3MTY0NjgxMjl9.mSbK8R-XAEhIwJMQSapZYaF_mOrsVSMP14X88RxN0Jw","createdAt":"2024-05-22T10:49:22.624Z","deletedAt":null,"updatedAt":"2024-05-22T10:49:22.039Z"}}}
         status_message: ""
         proto_major: 0
         proto_minor: 0
@@ -56,6 +56,24 @@ tests:
             expected: 200
             actual: 200
         headers_result:
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "628"
+              actual:
+                key: Content-Length
+                value:
+                    - "628"
             - normal: true
               expected:
                 key: Content-Type
@@ -73,7 +91,7 @@ tests:
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:09 GMT
+                    - Wed, 22 May 2024 12:42:09 GMT
             - normal: true
               expected:
                 key: Etag
@@ -82,7 +100,7 @@ tests:
               actual:
                 key: Etag
                 value:
-                    - W/"274-KNwHAIX1B6ecZEaqCwl5Y/rdsrQ"
+                    - W/"274-uQ+/mTluXwbKxwew2sHJsYdQAZ8"
             - normal: true
               expected:
                 key: Keep-Alive
@@ -110,37 +128,19 @@ tests:
                 key: Access-Control-Allow-Origin
                 value:
                     - '*'
-            - normal: true
-              expected:
-                key: Connection
-                value:
-                    - keep-alive
-              actual:
-                key: Connection
-                value:
-                    - keep-alive
-            - normal: true
-              expected:
-                key: Content-Length
-                value:
-                    - "628"
-              actual:
-                key: Content-Length
-                value:
-                    - "628"
         body_result:
             - normal: true
               type: JSON
               expected: |
                 {"data":{"signUp":{"id":"100","email":"sagar@test.com","firstName":"sagar","lastName":"tomar","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWRBdCI6IjIwMjQtMDUtMjJUMTA6NDk6MjIuNjI0WiIsImlkIjoxMDAsImZpcnN0TmFtZSI6InNhZ2FyIiwibGFzdE5hbWUiOiJ0b21hciIsImVtYWlsIjoic2FnYXJAdGVzdC5jb20iLCJwYXNzd29yZCI6IjU1ZjQ1MTg2OWI3OTZlMmFlZmU3ODA2ZjA0YTJlMzBkIiwidXBkYXRlZEF0IjoiMjAyNC0wNS0yMlQxMDo0OToyMi4wMzlaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2Mzc0OTYyLCJleHAiOjE3MTY0NjEzNjJ9.21A-gz8QLnbx2bhpzMcezENjTGWKhBfwU4o2paFuEVM","createdAt":"2024-05-22T10:49:22.624Z","deletedAt":null,"updatedAt":"2024-05-22T10:49:22.039Z"}}}
               actual: |
-                {"data":{"signUp":{"id":"100","email":"sagar@test.com","firstName":"sagar","lastName":"tomar","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWRBdCI6IjIwMjQtMDUtMjJUMTA6NDk6MjIuNjI0WiIsImlkIjoxMDAsImZpcnN0TmFtZSI6InNhZ2FyIiwibGFzdE5hbWUiOiJ0b21hciIsImVtYWlsIjoic2FnYXJAdGVzdC5jb20iLCJwYXNzd29yZCI6IjU1ZjQ1MTg2OWI3OTZlMmFlZmU3ODA2ZjA0YTJlMzBkIiwidXBkYXRlZEF0IjoiMjAyNC0wNS0yMlQxMDo0OToyMi4wMzlaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2Mzc1MzA5LCJleHAiOjE3MTY0NjE3MDl9.1BWEYxZPr6YcJixMZDKj6nb8tdfUNQjzlpuNg3yd1GU","createdAt":"2024-05-22T10:49:22.624Z","deletedAt":null,"updatedAt":"2024-05-22T10:49:22.039Z"}}}
+                {"data":{"signUp":{"id":"100","email":"sagar@test.com","firstName":"sagar","lastName":"tomar","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImNyZWF0ZWRBdCI6IjIwMjQtMDUtMjJUMTA6NDk6MjIuNjI0WiIsImlkIjoxMDAsImZpcnN0TmFtZSI6InNhZ2FyIiwibGFzdE5hbWUiOiJ0b21hciIsImVtYWlsIjoic2FnYXJAdGVzdC5jb20iLCJwYXNzd29yZCI6IjU1ZjQ1MTg2OWI3OTZlMmFlZmU3ODA2ZjA0YTJlMzBkIiwidXBkYXRlZEF0IjoiMjAyNC0wNS0yMlQxMDo0OToyMi4wMzlaIiwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2MzgxNzI5LCJleHAiOjE3MTY0NjgxMjl9.mSbK8R-XAEhIwJMQSapZYaF_mOrsVSMP14X88RxN0Jw","createdAt":"2024-05-22T10:49:22.624Z","deletedAt":null,"updatedAt":"2024-05-22T10:49:22.039Z"}}}
         dep_result: []
     - kind: Http
       name: test-set-0
       status: PASSED
-      started: 1716375310
-      completed: 1716375310
+      started: 1716381729
+      completed: 1716381730
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-2
@@ -167,12 +167,12 @@ tests:
             Connection: keep-alive
             Content-Length: "445"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:10 GMT
-            Etag: W/"1bd-owU4C63QIFXTJIzevDZqIMX/EZU"
+            Date: Wed, 22 May 2024 12:42:10 GMT
+            Etag: W/"1bd-e9GVtwoSqyN8f/QS3Pql1mCNn1A"
             Keep-Alive: timeout=5
             X-Powered-By: Express
         body: |
-            {"data":{"signIn":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzUzMTAsImV4cCI6MTcxNjQ2MTcxMH0.3NTt6TrlTbkQiGtTVNFHODvaN-IviyGisNGaS9JBGnA"}}}
+            {"data":{"signIn":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzODE3MzAsImV4cCI6MTcxNjQ2ODEzMH0.F7VeDJ1Ps_6zju1vD-U6m-jj10SYQpsq5hzyitHO9_k"}}}
         status_message: ""
         proto_major: 0
         proto_minor: 0
@@ -185,33 +185,6 @@ tests:
             expected: 200
             actual: 200
         headers_result:
-            - normal: true
-              expected:
-                key: Etag
-                value:
-                    - W/"1bd-PdnEX308DnsXm76lv8wwKgQTX9c"
-              actual:
-                key: Etag
-                value:
-                    - W/"1bd-owU4C63QIFXTJIzevDZqIMX/EZU"
-            - normal: true
-              expected:
-                key: Keep-Alive
-                value:
-                    - timeout=5
-              actual:
-                key: Keep-Alive
-                value:
-                    - timeout=5
-            - normal: true
-              expected:
-                key: X-Powered-By
-                value:
-                    - Express
-              actual:
-                key: X-Powered-By
-                value:
-                    - Express
             - normal: true
               expected:
                 key: Access-Control-Allow-Origin
@@ -256,20 +229,47 @@ tests:
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:10 GMT
+                    - Wed, 22 May 2024 12:42:10 GMT
+            - normal: true
+              expected:
+                key: Etag
+                value:
+                    - W/"1bd-PdnEX308DnsXm76lv8wwKgQTX9c"
+              actual:
+                key: Etag
+                value:
+                    - W/"1bd-e9GVtwoSqyN8f/QS3Pql1mCNn1A"
+            - normal: true
+              expected:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+              actual:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
         body_result:
             - normal: true
               type: JSON
               expected: |
                 {"data":{"signIn":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I"}}}
               actual: |
-                {"data":{"signIn":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzUzMTAsImV4cCI6MTcxNjQ2MTcxMH0.3NTt6TrlTbkQiGtTVNFHODvaN-IviyGisNGaS9JBGnA"}}}
+                {"data":{"signIn":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzODE3MzAsImV4cCI6MTcxNjQ2ODEzMH0.F7VeDJ1Ps_6zju1vD-U6m-jj10SYQpsq5hzyitHO9_k"}}}
         dep_result: []
     - kind: Http
       name: test-set-0
-      status: FAILED
-      started: 1716375311
-      completed: 1716375312
+      status: PASSED
+      started: 1716381731
+      completed: 1716381732
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-3
@@ -295,14 +295,14 @@ tests:
         header:
             Access-Control-Allow-Origin: '*'
             Connection: keep-alive
-            Content-Length: "883"
+            Content-Length: "875"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:12 GMT
-            Etag: W/"373-3tYRFZQyuy2GI0K8NI52copRoMQ"
+            Date: Wed, 22 May 2024 12:42:12 GMT
+            Etag: W/"36b-qz81+aAb3goYoSMPEkGmZ+6IQ60"
             Keep-Alive: timeout=5
             X-Powered-By: Express
         body: |
-            {"data":{"supplierProducts":{"edges":[{"node":{"id":"1","suppliers":{"edges":[{"node":{"id":"1713","name":"Reichert, Stehr and Kunze"}}]},"products":{"edges":[{"node":{"id":"1","name":"Refined Fresh Gloves"}}]}}},{"node":{"id":"2","suppliers":{"edges":[{"node":{"id":"1713","name":"Reichert, Stehr and Kunze"}}]},"products":{"edges":[{"node":{"id":"1","name":"Refined Fresh Gloves"}}]}}},{"node":{"id":"3","suppliers":{"edges":[{"node":{"id":"380","name":"Friesen LLC"}}]},"products":{"edges":[{"node":{"id":"3","name":"Intelligent Wooden Hat"}}]}}},{"node":{"id":"4","suppliers":{"edges":[{"node":{"id":"1427","name":"Hessel - Wisoky"}}]},"products":{"edges":[{"node":{"id":"4","name":"Gorgeous Concrete Soap"}}]}}},{"node":{"id":"5","suppliers":{"edges":[{"node":{"id":"571","name":"Nitzsche Group"}}]},"products":{"edges":[{"node":{"id":"5","name":"Gorgeous Wooden Car"}}]}}}]}}}
+            {"data":{"supplierProducts":{"edges":[{"node":{"id":"1","suppliers":{"edges":[{"node":{"id":"1713","name":"Reichert, Stehr and Kunze"}}]},"products":{"edges":[{"node":{"id":"1","name":"Refined Fresh Gloves"}}]}}},{"node":{"id":"2","suppliers":{"edges":[{"node":{"id":"1213","name":"Hilll - Keeling"}}]},"products":{"edges":[{"node":{"id":"2","name":"Intelligent Metal Soap"}}]}}},{"node":{"id":"3","suppliers":{"edges":[{"node":{"id":"380","name":"Friesen LLC"}}]},"products":{"edges":[{"node":{"id":"3","name":"Intelligent Wooden Hat"}}]}}},{"node":{"id":"4","suppliers":{"edges":[{"node":{"id":"1427","name":"Hessel - Wisoky"}}]},"products":{"edges":[{"node":{"id":"4","name":"Gorgeous Concrete Soap"}}]}}},{"node":{"id":"5","suppliers":{"edges":[{"node":{"id":"571","name":"Nitzsche Group"}}]},"products":{"edges":[{"node":{"id":"5","name":"Gorgeous Wooden Car"}}]}}}]}}}
         status_message: ""
         proto_major: 0
         proto_minor: 0
@@ -317,24 +317,6 @@ tests:
         headers_result:
             - normal: true
               expected:
-                key: X-Powered-By
-                value:
-                    - Express
-              actual:
-                key: X-Powered-By
-                value:
-                    - Express
-            - normal: true
-              expected:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-              actual:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-            - normal: true
-              expected:
                 key: Connection
                 value:
                     - keep-alive
@@ -342,7 +324,7 @@ tests:
                 key: Connection
                 value:
                     - keep-alive
-            - normal: false
+            - normal: true
               expected:
                 key: Content-Length
                 value:
@@ -350,7 +332,7 @@ tests:
               actual:
                 key: Content-Length
                 value:
-                    - "883"
+                    - "875"
             - normal: true
               expected:
                 key: Content-Type
@@ -368,7 +350,7 @@ tests:
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:12 GMT
+                    - Wed, 22 May 2024 12:42:12 GMT
             - normal: true
               expected:
                 key: Etag
@@ -377,7 +359,7 @@ tests:
               actual:
                 key: Etag
                 value:
-                    - W/"373-3tYRFZQyuy2GI0K8NI52copRoMQ"
+                    - W/"36b-qz81+aAb3goYoSMPEkGmZ+6IQ60"
             - normal: true
               expected:
                 key: Keep-Alive
@@ -387,19 +369,37 @@ tests:
                 key: Keep-Alive
                 value:
                     - timeout=5
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+            - normal: true
+              expected:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+              actual:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
         body_result:
-            - normal: false
+            - normal: true
               type: JSON
               expected: |
                 {"data":{"supplierProducts":{"edges":[{"node":{"id":"1","suppliers":{"edges":[{"node":{"id":"1713","name":"Reichert, Stehr and Kunze"}}]},"products":{"edges":[{"node":{"id":"1","name":"Refined Fresh Gloves"}}]}}},{"node":{"id":"2","suppliers":{"edges":[{"node":{"id":"1213","name":"Hilll - Keeling"}}]},"products":{"edges":[{"node":{"id":"2","name":"Intelligent Metal Soap"}}]}}},{"node":{"id":"3","suppliers":{"edges":[{"node":{"id":"380","name":"Friesen LLC"}}]},"products":{"edges":[{"node":{"id":"3","name":"Intelligent Wooden Hat"}}]}}},{"node":{"id":"4","suppliers":{"edges":[{"node":{"id":"1427","name":"Hessel - Wisoky"}}]},"products":{"edges":[{"node":{"id":"4","name":"Gorgeous Concrete Soap"}}]}}},{"node":{"id":"5","suppliers":{"edges":[{"node":{"id":"571","name":"Nitzsche Group"}}]},"products":{"edges":[{"node":{"id":"5","name":"Gorgeous Wooden Car"}}]}}}]}}}
               actual: |
-                {"data":{"supplierProducts":{"edges":[{"node":{"id":"1","suppliers":{"edges":[{"node":{"id":"1713","name":"Reichert, Stehr and Kunze"}}]},"products":{"edges":[{"node":{"id":"1","name":"Refined Fresh Gloves"}}]}}},{"node":{"id":"2","suppliers":{"edges":[{"node":{"id":"1713","name":"Reichert, Stehr and Kunze"}}]},"products":{"edges":[{"node":{"id":"1","name":"Refined Fresh Gloves"}}]}}},{"node":{"id":"3","suppliers":{"edges":[{"node":{"id":"380","name":"Friesen LLC"}}]},"products":{"edges":[{"node":{"id":"3","name":"Intelligent Wooden Hat"}}]}}},{"node":{"id":"4","suppliers":{"edges":[{"node":{"id":"1427","name":"Hessel - Wisoky"}}]},"products":{"edges":[{"node":{"id":"4","name":"Gorgeous Concrete Soap"}}]}}},{"node":{"id":"5","suppliers":{"edges":[{"node":{"id":"571","name":"Nitzsche Group"}}]},"products":{"edges":[{"node":{"id":"5","name":"Gorgeous Wooden Car"}}]}}}]}}}
+                {"data":{"supplierProducts":{"edges":[{"node":{"id":"1","suppliers":{"edges":[{"node":{"id":"1713","name":"Reichert, Stehr and Kunze"}}]},"products":{"edges":[{"node":{"id":"1","name":"Refined Fresh Gloves"}}]}}},{"node":{"id":"2","suppliers":{"edges":[{"node":{"id":"1213","name":"Hilll - Keeling"}}]},"products":{"edges":[{"node":{"id":"2","name":"Intelligent Metal Soap"}}]}}},{"node":{"id":"3","suppliers":{"edges":[{"node":{"id":"380","name":"Friesen LLC"}}]},"products":{"edges":[{"node":{"id":"3","name":"Intelligent Wooden Hat"}}]}}},{"node":{"id":"4","suppliers":{"edges":[{"node":{"id":"1427","name":"Hessel - Wisoky"}}]},"products":{"edges":[{"node":{"id":"4","name":"Gorgeous Concrete Soap"}}]}}},{"node":{"id":"5","suppliers":{"edges":[{"node":{"id":"571","name":"Nitzsche Group"}}]},"products":{"edges":[{"node":{"id":"5","name":"Gorgeous Wooden Car"}}]}}}]}}}
         dep_result: []
     - kind: Http
       name: test-set-0
       status: PASSED
-      started: 1716375313
-      completed: 1716375314
+      started: 1716381733
+      completed: 1716381734
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-4
@@ -427,7 +427,7 @@ tests:
             Connection: keep-alive
             Content-Length: "849"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:14 GMT
+            Date: Wed, 22 May 2024 12:42:14 GMT
             Etag: W/"351-xmPt5IOAfxt8LbRwVCNEhlPkNTc"
             Keep-Alive: timeout=5
             X-Powered-By: Express
@@ -447,49 +447,13 @@ tests:
         headers_result:
             - normal: true
               expected:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-              actual:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-            - normal: true
-              expected:
-                key: Connection
-                value:
-                    - keep-alive
-              actual:
-                key: Connection
-                value:
-                    - keep-alive
-            - normal: true
-              expected:
-                key: Content-Length
-                value:
-                    - "849"
-              actual:
-                key: Content-Length
-                value:
-                    - "849"
-            - normal: true
-              expected:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-              actual:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-            - normal: true
-              expected:
                 key: Date
                 value:
                     - Wed, 22 May 2024 10:50:37 GMT
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:14 GMT
+                    - Wed, 22 May 2024 12:42:14 GMT
             - normal: true
               expected:
                 key: Etag
@@ -517,6 +481,42 @@ tests:
                 key: X-Powered-By
                 value:
                     - Express
+            - normal: true
+              expected:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+              actual:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "849"
+              actual:
+                key: Content-Length
+                value:
+                    - "849"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
         body_result:
             - normal: true
               type: JSON
@@ -528,8 +528,8 @@ tests:
     - kind: Http
       name: test-set-0
       status: PASSED
-      started: 1716375315
-      completed: 1716375317
+      started: 1716381735
+      completed: 1716381737
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-5
@@ -557,7 +557,7 @@ tests:
             Connection: keep-alive
             Content-Length: "1489"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:17 GMT
+            Date: Wed, 22 May 2024 12:42:17 GMT
             Etag: W/"5d1-7JPo9uv/g5S0KF+Xc70GjWpFhZY"
             Keep-Alive: timeout=5
             X-Powered-By: Express
@@ -579,6 +579,33 @@ tests:
         headers_result:
             - normal: true
               expected:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+              actual:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "1489"
+              actual:
+                key: Content-Length
+                value:
+                    - "1489"
+            - normal: true
+              expected:
                 key: Content-Type
                 value:
                     - application/json; charset=utf-8
@@ -594,7 +621,7 @@ tests:
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:17 GMT
+                    - Wed, 22 May 2024 12:42:17 GMT
             - normal: true
               expected:
                 key: Etag
@@ -622,33 +649,6 @@ tests:
                 key: X-Powered-By
                 value:
                     - Express
-            - normal: true
-              expected:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-              actual:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-            - normal: true
-              expected:
-                key: Connection
-                value:
-                    - keep-alive
-              actual:
-                key: Connection
-                value:
-                    - keep-alive
-            - normal: true
-              expected:
-                key: Content-Length
-                value:
-                    - "1489"
-              actual:
-                key: Content-Length
-                value:
-                    - "1489"
         body_result:
             - normal: true
               type: JSON
@@ -660,8 +660,8 @@ tests:
     - kind: Http
       name: test-set-0
       status: PASSED
-      started: 1716375317
-      completed: 1716375320
+      started: 1716381737
+      completed: 1716381740
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-6
@@ -689,7 +689,7 @@ tests:
             Connection: keep-alive
             Content-Length: "2042"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:20 GMT
+            Date: Wed, 22 May 2024 12:42:20 GMT
             Etag: W/"7fa-i68+UR6dj8PdVLPv41Vw0tdaF/c"
             Keep-Alive: timeout=5
             X-Powered-By: Express
@@ -709,13 +709,40 @@ tests:
         headers_result:
             - normal: true
               expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "2042"
+              actual:
+                key: Content-Length
+                value:
+                    - "2042"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+            - normal: true
+              expected:
                 key: Date
                 value:
                     - Wed, 22 May 2024 10:51:18 GMT
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:20 GMT
+                    - Wed, 22 May 2024 12:42:20 GMT
             - normal: true
               expected:
                 key: Etag
@@ -752,33 +779,6 @@ tests:
                 key: Access-Control-Allow-Origin
                 value:
                     - '*'
-            - normal: true
-              expected:
-                key: Connection
-                value:
-                    - keep-alive
-              actual:
-                key: Connection
-                value:
-                    - keep-alive
-            - normal: true
-              expected:
-                key: Content-Length
-                value:
-                    - "2042"
-              actual:
-                key: Content-Length
-                value:
-                    - "2042"
-            - normal: true
-              expected:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-              actual:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
         body_result:
             - normal: true
               type: JSON
@@ -789,9 +789,9 @@ tests:
         dep_result: []
     - kind: Http
       name: test-set-0
-      status: FAILED
-      started: 1716375320
-      completed: 1716375324
+      status: PASSED
+      started: 1716381741
+      completed: 1716381743
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-7
@@ -819,12 +819,12 @@ tests:
             Connection: keep-alive
             Content-Length: "2174"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:24 GMT
-            Etag: W/"87e-hitBU8CXTczQB+uuZozh1NQ7l/Q"
+            Date: Wed, 22 May 2024 12:42:23 GMT
+            Etag: W/"87e-kAaZwoVedVXoWNEY6+cz0KJ7UYU"
             Keep-Alive: timeout=5
             X-Powered-By: Express
         body: |
-            {"data":{"suppliers":{"edges":[{"node":{"id":"1","name":"Kerluke, Beer and Balistreri","addressId":1092,"addresses":{"edges":[{"node":{"id":"1092","address1":"Tyler Trace"}}]},"products":{"edges":[]}}},{"node":{"id":"2","name":"Cassin - Aufderhar","addressId":1861,"addresses":{"edges":[{"node":{"id":"1861","address1":"Johnson Cove"}}]},"products":{"edges":[]}}},{"node":{"id":"3","name":"Conroy, Kunde and Beahan","addressId":1710,"addresses":{"edges":[{"node":{"id":"863","address1":"Dandre Courts"}}]},"products":{"edges":[{"node":{"id":"766","name":"Refined Wooden Mouse"}}]}}},{"node":{"id":"4","name":"Kuvalis, Satterfield and Fisher","addressId":1196,"addresses":{"edges":[{"node":{"id":"1196","address1":"Damien Forges"}}]},"products":{"edges":[{"node":{"id":"857","name":"Awesome Fresh Table"}},{"node":{"id":"938","name":"Ergonomic Metal Mouse"}}]}}},{"node":{"id":"5","name":"Langosh, Schumm and Rogahn","addressId":1376,"addresses":{"edges":[{"node":{"id":"1376","address1":"Wilderman Trail"}}]},"products":{"edges":[{"node":{"id":"685","name":"Unbranded Concrete Soap"}},{"node":{"id":"1558","name":"Small Granite Mouse"}}]}}},{"node":{"id":"6","name":"Mosciski - Emmerich","addressId":863,"addresses":{"edges":[{"node":{"id":"1710","address1":"Kunze Plains"}}]},"products":{"edges":[{"node":{"id":"1428","name":"Ergonomic Granite Shoes"}},{"node":{"id":"1559","name":"Sleek Fresh Shoes"}}]}}},{"node":{"id":"7","name":"Bernhard, Barton and Adams","addressId":1695,"addresses":{"edges":[{"node":{"id":"1695","address1":"Everardo Shoals"}}]},"products":{"edges":[{"node":{"id":"753","name":"Generic Wooden Hat"}}]}}},{"node":{"id":"8","name":"Yost - Konopelski","addressId":992,"addresses":{"edges":[{"node":{"id":"992","address1":"Amara Centers"}}]},"products":{"edges":[{"node":{"id":"1074","name":"Generic Plastic Gloves"}}]}}},{"node":{"id":"9","name":"Dibbert, Cole and Toy","addressId":465,"addresses":{"edges":[{"node":{"id":"465","address1":"Trantow Meadow"}}]},"products":{"edges":[]}}},{"node":{"id":"10","name":"Weissnat LLC","addressId":180,"addresses":{"edges":[{"node":{"id":"180","address1":"Collier Extensions"}}]},"products":{"edges":[]}}}]}}}
+            {"data":{"suppliers":{"edges":[{"node":{"id":"1","name":"Kerluke, Beer and Balistreri","addressId":1092,"addresses":{"edges":[{"node":{"id":"1092","address1":"Tyler Trace"}}]},"products":{"edges":[]}}},{"node":{"id":"2","name":"Cassin - Aufderhar","addressId":1861,"addresses":{"edges":[{"node":{"id":"1861","address1":"Johnson Cove"}}]},"products":{"edges":[]}}},{"node":{"id":"3","name":"Conroy, Kunde and Beahan","addressId":1710,"addresses":{"edges":[{"node":{"id":"1710","address1":"Kunze Plains"}}]},"products":{"edges":[{"node":{"id":"766","name":"Refined Wooden Mouse"}}]}}},{"node":{"id":"4","name":"Kuvalis, Satterfield and Fisher","addressId":1196,"addresses":{"edges":[{"node":{"id":"1196","address1":"Damien Forges"}}]},"products":{"edges":[{"node":{"id":"857","name":"Awesome Fresh Table"}},{"node":{"id":"938","name":"Ergonomic Metal Mouse"}}]}}},{"node":{"id":"5","name":"Langosh, Schumm and Rogahn","addressId":1376,"addresses":{"edges":[{"node":{"id":"1376","address1":"Wilderman Trail"}}]},"products":{"edges":[{"node":{"id":"685","name":"Unbranded Concrete Soap"}},{"node":{"id":"1558","name":"Small Granite Mouse"}}]}}},{"node":{"id":"6","name":"Mosciski - Emmerich","addressId":863,"addresses":{"edges":[{"node":{"id":"863","address1":"Dandre Courts"}}]},"products":{"edges":[{"node":{"id":"1428","name":"Ergonomic Granite Shoes"}},{"node":{"id":"1559","name":"Sleek Fresh Shoes"}}]}}},{"node":{"id":"7","name":"Bernhard, Barton and Adams","addressId":1695,"addresses":{"edges":[{"node":{"id":"1695","address1":"Everardo Shoals"}}]},"products":{"edges":[{"node":{"id":"753","name":"Generic Wooden Hat"}}]}}},{"node":{"id":"8","name":"Yost - Konopelski","addressId":992,"addresses":{"edges":[{"node":{"id":"992","address1":"Amara Centers"}}]},"products":{"edges":[{"node":{"id":"1074","name":"Generic Plastic Gloves"}}]}}},{"node":{"id":"9","name":"Dibbert, Cole and Toy","addressId":465,"addresses":{"edges":[{"node":{"id":"465","address1":"Trantow Meadow"}}]},"products":{"edges":[]}}},{"node":{"id":"10","name":"Weissnat LLC","addressId":180,"addresses":{"edges":[{"node":{"id":"180","address1":"Collier Extensions"}}]},"products":{"edges":[]}}}]}}}
         status_message: ""
         proto_major: 0
         proto_minor: 0
@@ -839,58 +839,13 @@ tests:
         headers_result:
             - normal: true
               expected:
-                key: X-Powered-By
-                value:
-                    - Express
-              actual:
-                key: X-Powered-By
-                value:
-                    - Express
-            - normal: true
-              expected:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-              actual:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-            - normal: true
-              expected:
-                key: Connection
-                value:
-                    - keep-alive
-              actual:
-                key: Connection
-                value:
-                    - keep-alive
-            - normal: true
-              expected:
-                key: Content-Length
-                value:
-                    - "2174"
-              actual:
-                key: Content-Length
-                value:
-                    - "2174"
-            - normal: true
-              expected:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-              actual:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-            - normal: true
-              expected:
                 key: Date
                 value:
                     - Wed, 22 May 2024 10:51:38 GMT
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:24 GMT
+                    - Wed, 22 May 2024 12:42:23 GMT
             - normal: true
               expected:
                 key: Etag
@@ -899,7 +854,7 @@ tests:
               actual:
                 key: Etag
                 value:
-                    - W/"87e-hitBU8CXTczQB+uuZozh1NQ7l/Q"
+                    - W/"87e-kAaZwoVedVXoWNEY6+cz0KJ7UYU"
             - normal: true
               expected:
                 key: Keep-Alive
@@ -909,19 +864,64 @@ tests:
                 key: Keep-Alive
                 value:
                     - timeout=5
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+            - normal: true
+              expected:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+              actual:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "2174"
+              actual:
+                key: Content-Length
+                value:
+                    - "2174"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
         body_result:
-            - normal: false
+            - normal: true
               type: JSON
               expected: |
                 {"data":{"suppliers":{"edges":[{"node":{"id":"1","name":"Kerluke, Beer and Balistreri","addressId":1092,"addresses":{"edges":[{"node":{"id":"1092","address1":"Tyler Trace"}}]},"products":{"edges":[]}}},{"node":{"id":"2","name":"Cassin - Aufderhar","addressId":1861,"addresses":{"edges":[{"node":{"id":"1861","address1":"Johnson Cove"}}]},"products":{"edges":[]}}},{"node":{"id":"3","name":"Conroy, Kunde and Beahan","addressId":1710,"addresses":{"edges":[{"node":{"id":"1710","address1":"Kunze Plains"}}]},"products":{"edges":[{"node":{"id":"766","name":"Refined Wooden Mouse"}}]}}},{"node":{"id":"4","name":"Kuvalis, Satterfield and Fisher","addressId":1196,"addresses":{"edges":[{"node":{"id":"1196","address1":"Damien Forges"}}]},"products":{"edges":[{"node":{"id":"857","name":"Awesome Fresh Table"}},{"node":{"id":"938","name":"Ergonomic Metal Mouse"}}]}}},{"node":{"id":"5","name":"Langosh, Schumm and Rogahn","addressId":1376,"addresses":{"edges":[{"node":{"id":"1376","address1":"Wilderman Trail"}}]},"products":{"edges":[{"node":{"id":"685","name":"Unbranded Concrete Soap"}},{"node":{"id":"1558","name":"Small Granite Mouse"}}]}}},{"node":{"id":"6","name":"Mosciski - Emmerich","addressId":863,"addresses":{"edges":[{"node":{"id":"863","address1":"Dandre Courts"}}]},"products":{"edges":[{"node":{"id":"1428","name":"Ergonomic Granite Shoes"}},{"node":{"id":"1559","name":"Sleek Fresh Shoes"}}]}}},{"node":{"id":"7","name":"Bernhard, Barton and Adams","addressId":1695,"addresses":{"edges":[{"node":{"id":"1695","address1":"Everardo Shoals"}}]},"products":{"edges":[{"node":{"id":"753","name":"Generic Wooden Hat"}}]}}},{"node":{"id":"8","name":"Yost - Konopelski","addressId":992,"addresses":{"edges":[{"node":{"id":"992","address1":"Amara Centers"}}]},"products":{"edges":[{"node":{"id":"1074","name":"Generic Plastic Gloves"}}]}}},{"node":{"id":"9","name":"Dibbert, Cole and Toy","addressId":465,"addresses":{"edges":[{"node":{"id":"465","address1":"Trantow Meadow"}}]},"products":{"edges":[]}}},{"node":{"id":"10","name":"Weissnat LLC","addressId":180,"addresses":{"edges":[{"node":{"id":"180","address1":"Collier Extensions"}}]},"products":{"edges":[]}}}]}}}
               actual: |
-                {"data":{"suppliers":{"edges":[{"node":{"id":"1","name":"Kerluke, Beer and Balistreri","addressId":1092,"addresses":{"edges":[{"node":{"id":"1092","address1":"Tyler Trace"}}]},"products":{"edges":[]}}},{"node":{"id":"2","name":"Cassin - Aufderhar","addressId":1861,"addresses":{"edges":[{"node":{"id":"1861","address1":"Johnson Cove"}}]},"products":{"edges":[]}}},{"node":{"id":"3","name":"Conroy, Kunde and Beahan","addressId":1710,"addresses":{"edges":[{"node":{"id":"863","address1":"Dandre Courts"}}]},"products":{"edges":[{"node":{"id":"766","name":"Refined Wooden Mouse"}}]}}},{"node":{"id":"4","name":"Kuvalis, Satterfield and Fisher","addressId":1196,"addresses":{"edges":[{"node":{"id":"1196","address1":"Damien Forges"}}]},"products":{"edges":[{"node":{"id":"857","name":"Awesome Fresh Table"}},{"node":{"id":"938","name":"Ergonomic Metal Mouse"}}]}}},{"node":{"id":"5","name":"Langosh, Schumm and Rogahn","addressId":1376,"addresses":{"edges":[{"node":{"id":"1376","address1":"Wilderman Trail"}}]},"products":{"edges":[{"node":{"id":"685","name":"Unbranded Concrete Soap"}},{"node":{"id":"1558","name":"Small Granite Mouse"}}]}}},{"node":{"id":"6","name":"Mosciski - Emmerich","addressId":863,"addresses":{"edges":[{"node":{"id":"1710","address1":"Kunze Plains"}}]},"products":{"edges":[{"node":{"id":"1428","name":"Ergonomic Granite Shoes"}},{"node":{"id":"1559","name":"Sleek Fresh Shoes"}}]}}},{"node":{"id":"7","name":"Bernhard, Barton and Adams","addressId":1695,"addresses":{"edges":[{"node":{"id":"1695","address1":"Everardo Shoals"}}]},"products":{"edges":[{"node":{"id":"753","name":"Generic Wooden Hat"}}]}}},{"node":{"id":"8","name":"Yost - Konopelski","addressId":992,"addresses":{"edges":[{"node":{"id":"992","address1":"Amara Centers"}}]},"products":{"edges":[{"node":{"id":"1074","name":"Generic Plastic Gloves"}}]}}},{"node":{"id":"9","name":"Dibbert, Cole and Toy","addressId":465,"addresses":{"edges":[{"node":{"id":"465","address1":"Trantow Meadow"}}]},"products":{"edges":[]}}},{"node":{"id":"10","name":"Weissnat LLC","addressId":180,"addresses":{"edges":[{"node":{"id":"180","address1":"Collier Extensions"}}]},"products":{"edges":[]}}}]}}}
+                {"data":{"suppliers":{"edges":[{"node":{"id":"1","name":"Kerluke, Beer and Balistreri","addressId":1092,"addresses":{"edges":[{"node":{"id":"1092","address1":"Tyler Trace"}}]},"products":{"edges":[]}}},{"node":{"id":"2","name":"Cassin - Aufderhar","addressId":1861,"addresses":{"edges":[{"node":{"id":"1861","address1":"Johnson Cove"}}]},"products":{"edges":[]}}},{"node":{"id":"3","name":"Conroy, Kunde and Beahan","addressId":1710,"addresses":{"edges":[{"node":{"id":"1710","address1":"Kunze Plains"}}]},"products":{"edges":[{"node":{"id":"766","name":"Refined Wooden Mouse"}}]}}},{"node":{"id":"4","name":"Kuvalis, Satterfield and Fisher","addressId":1196,"addresses":{"edges":[{"node":{"id":"1196","address1":"Damien Forges"}}]},"products":{"edges":[{"node":{"id":"857","name":"Awesome Fresh Table"}},{"node":{"id":"938","name":"Ergonomic Metal Mouse"}}]}}},{"node":{"id":"5","name":"Langosh, Schumm and Rogahn","addressId":1376,"addresses":{"edges":[{"node":{"id":"1376","address1":"Wilderman Trail"}}]},"products":{"edges":[{"node":{"id":"685","name":"Unbranded Concrete Soap"}},{"node":{"id":"1558","name":"Small Granite Mouse"}}]}}},{"node":{"id":"6","name":"Mosciski - Emmerich","addressId":863,"addresses":{"edges":[{"node":{"id":"863","address1":"Dandre Courts"}}]},"products":{"edges":[{"node":{"id":"1428","name":"Ergonomic Granite Shoes"}},{"node":{"id":"1559","name":"Sleek Fresh Shoes"}}]}}},{"node":{"id":"7","name":"Bernhard, Barton and Adams","addressId":1695,"addresses":{"edges":[{"node":{"id":"1695","address1":"Everardo Shoals"}}]},"products":{"edges":[{"node":{"id":"753","name":"Generic Wooden Hat"}}]}}},{"node":{"id":"8","name":"Yost - Konopelski","addressId":992,"addresses":{"edges":[{"node":{"id":"992","address1":"Amara Centers"}}]},"products":{"edges":[{"node":{"id":"1074","name":"Generic Plastic Gloves"}}]}}},{"node":{"id":"9","name":"Dibbert, Cole and Toy","addressId":465,"addresses":{"edges":[{"node":{"id":"465","address1":"Trantow Meadow"}}]},"products":{"edges":[]}}},{"node":{"id":"10","name":"Weissnat LLC","addressId":180,"addresses":{"edges":[{"node":{"id":"180","address1":"Collier Extensions"}}]},"products":{"edges":[]}}}]}}}
         dep_result: []
     - kind: Http
       name: test-set-0
       status: PASSED
-      started: 1716375324
-      completed: 1716375327
+      started: 1716381744
+      completed: 1716381746
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-8
@@ -949,7 +949,7 @@ tests:
             Connection: keep-alive
             Content-Length: "2250"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:27 GMT
+            Date: Wed, 22 May 2024 12:42:26 GMT
             Etag: W/"8ca-Z/WQgk2UPDHeSK/Wz9K0tE4nADA"
             Keep-Alive: timeout=5
             X-Powered-By: Express
@@ -969,67 +969,13 @@ tests:
         headers_result:
             - normal: true
               expected:
-                key: Keep-Alive
-                value:
-                    - timeout=5
-              actual:
-                key: Keep-Alive
-                value:
-                    - timeout=5
-            - normal: true
-              expected:
-                key: X-Powered-By
-                value:
-                    - Express
-              actual:
-                key: X-Powered-By
-                value:
-                    - Express
-            - normal: true
-              expected:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-              actual:
-                key: Access-Control-Allow-Origin
-                value:
-                    - '*'
-            - normal: true
-              expected:
-                key: Connection
-                value:
-                    - keep-alive
-              actual:
-                key: Connection
-                value:
-                    - keep-alive
-            - normal: true
-              expected:
-                key: Content-Length
-                value:
-                    - "2250"
-              actual:
-                key: Content-Length
-                value:
-                    - "2250"
-            - normal: true
-              expected:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-              actual:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-            - normal: true
-              expected:
                 key: Date
                 value:
                     - Wed, 22 May 2024 10:52:00 GMT
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:27 GMT
+                    - Wed, 22 May 2024 12:42:26 GMT
             - normal: true
               expected:
                 key: Etag
@@ -1039,6 +985,60 @@ tests:
                 key: Etag
                 value:
                     - W/"8ca-Z/WQgk2UPDHeSK/Wz9K0tE4nADA"
+            - normal: true
+              expected:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+              actual:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+            - normal: true
+              expected:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+              actual:
+                key: Access-Control-Allow-Origin
+                value:
+                    - '*'
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "2250"
+              actual:
+                key: Content-Length
+                value:
+                    - "2250"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
         body_result:
             - normal: true
               type: JSON
@@ -1050,8 +1050,8 @@ tests:
     - kind: Http
       name: test-set-0
       status: PASSED
-      started: 1716375327
-      completed: 1716375329
+      started: 1716381747
+      completed: 1716381749
       test_case_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0
       mock_path: /Users/apple/repos/node-express-graphql-template/keploy/test-set-0/mocks.yaml
       test_case_id: test-9
@@ -1079,7 +1079,7 @@ tests:
             Connection: keep-alive
             Content-Length: "2364"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 22 May 2024 10:55:29 GMT
+            Date: Wed, 22 May 2024 12:42:29 GMT
             Etag: W/"93c-bZUj1xeEOpAolcAlaV1AO05W52E"
             Keep-Alive: timeout=5
             X-Powered-By: Express
@@ -1099,31 +1099,13 @@ tests:
         headers_result:
             - normal: true
               expected:
-                key: Content-Length
-                value:
-                    - "2364"
-              actual:
-                key: Content-Length
-                value:
-                    - "2364"
-            - normal: true
-              expected:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-              actual:
-                key: Content-Type
-                value:
-                    - application/json; charset=utf-8
-            - normal: true
-              expected:
                 key: Date
                 value:
                     - Wed, 22 May 2024 10:52:22 GMT
               actual:
                 key: Date
                 value:
-                    - Wed, 22 May 2024 10:55:29 GMT
+                    - Wed, 22 May 2024 12:42:29 GMT
             - normal: true
               expected:
                 key: Etag
@@ -1169,6 +1151,24 @@ tests:
                 key: Connection
                 value:
                     - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "2364"
+              actual:
+                key: Content-Length
+                value:
+                    - "2364"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
         body_result:
             - normal: true
               type: JSON
