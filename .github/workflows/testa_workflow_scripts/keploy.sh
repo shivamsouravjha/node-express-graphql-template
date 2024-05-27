@@ -34,14 +34,8 @@ echo "Project built successfully"
 sudo -E env PATH="$PATH" keployE test -c 'sh ./scripts/migrate-and-run.sh' --delay 50 --generateGithubActions=false
 echo "Keploy started in test mode"
 
-# Optionally, run tests with coverage (commented out)
-# sudo -E env PATH=$PATH keploy test -c "npm test" --delay 5 --coverage
-
-# # Run specific test sets
-# sudo -E env PATH="$PATH" keployE test -c 'sh ./scripts/migrate-and-run.sh' --delay 50 --testsets test-set-0 --generateGithubActions=false
-
-# # Run final test with apiTimeout and delay
-# sudo -E env PATH="$PATH" keployE test -c 'sh ./scripts/migrate-and-run.sh' --apiTimeout 50 --delay 10 --generateGithubActions=false
+report_file="./keploy/reports/test-run-0/test-set-0-report.yaml"
+test_status1=$(grep 'status:' "$report_file" | head -n 1 | awk '{print $2}')
 
 # Check the test status variables and exit accordingly
 if [ "$test_status1" = "PASSED" ]; then
