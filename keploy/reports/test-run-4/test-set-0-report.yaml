@@ -1,0 +1,119 @@
+version: api.keploy.io/v1beta1
+name: test-set-0-report
+status: PASSED
+success: 1
+failure: 0
+total: 1
+tests:
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1716804394
+      completed: 1716804394
+      test_case_path: /Users/shivamsouravjha/samples-typescript/node-express-graphql-template/keploy/test-set-0
+      mock_path: /Users/shivamsouravjha/samples-typescript/node-express-graphql-template/keploy/test-set-0
+      test_case_id: test-1
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/
+        header:
+            Accept: '*/*'
+            Host: localhost:9000
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-05-27T13:24:36.1698712+05:30
+      resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "34"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 10:06:34 GMT
+            Etag: W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"data":"Service up and running!"}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "34"
+              actual:
+                key: Content-Length
+                value:
+                    - "34"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Mon, 27 May 2024 07:54:36 GMT
+              actual:
+                key: Date
+                value:
+                    - Mon, 27 May 2024 10:06:34 GMT
+            - normal: true
+              expected:
+                key: Etag
+                value:
+                    - W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
+              actual:
+                key: Etag
+                value:
+                    - W/"22-JDdGlSsNcTDc/IZSJ1Et4QxeuLY"
+            - normal: true
+              expected:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+              actual:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"data":"Service up and running!"}'
+              actual: '{"data":"Service up and running!"}'
+        dep_result: []
+test_set: test-set-0

@@ -37,33 +37,50 @@ export const queryRedis = async (type, args) => {
   let startDate;
   let endDate;
   let count = 0;
+
+  // Determine the start date
   if (!args?.startDate) {
     const createdAtDates = await getEarliestCreatedDate();
-    startDate = createdAtDates;
+    startDate = moment(createdAtDates);
   } else {
-    startDate = args.startDate.toISOString().split('T')[0];
+    startDate = moment(args.startDate);
   }
+
+  // Determine the end date
   if (!args?.endDate) {
-    endDate = moment().format('YYYY-MM-DD');
+    endDate = moment();
   } else {
-    endDate = args.endDate.toISOString().split('T')[0];
+    endDate = moment(args.endDate);
   }
-  const key = args?.category ? `${startDate}_${args.category}` : `${startDate}_total`;
-  while (startDate <= endDate) {
-    let aggregateData;
-    const totalForDate = await redis.get(key);
+
+  // Collect all keys to fetch in a single batch
+  const keys = [];
+  const currentDate = startDate.clone(); // Use clone to avoid mutating the original startDate
+  while (currentDate.isSameOrBefore(endDate, 'day')) {
+    const key = args?.category
+      ? `${currentDate.format('YYYY-MM-DD')}_${args.category}`
+      : `${currentDate.format('YYYY-MM-DD')}_total`;
+    keys.push(key);
+    currentDate.add(1, 'day');
+  }
+
+  // Batch fetch all keys
+  const values = await redis.mget(keys);
+
+  // Process the fetched values
+  values.forEach((totalForDate, index) => {
     if (totalForDate) {
       try {
-        aggregateData = JSON.parse(totalForDate);
-        count += Number(aggregateData[type]);
+        const aggregateData = JSON.parse(totalForDate); // Parse JSON string
+        count += Number(aggregateData[type]); // Aggregate the count for the specified type
       } catch (err) {
+        const key = keys[index];
         sendMessage(`Error while parsing data for ${key} as got value ${totalForDate}`);
         logger().info(`Error while parsing data for ${key} as got value ${totalForDate}`);
       }
     }
-    startDate = moment(startDate)
-      .add(1, 'day')
-      .format('YYYY-MM-DD');
-  }
+  });
+
+  console.log(`Final Count: ${count}`);
   return count;
 };
