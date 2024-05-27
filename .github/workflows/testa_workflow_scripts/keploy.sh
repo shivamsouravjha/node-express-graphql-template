@@ -11,7 +11,7 @@ trap 'handle_error $LINENO' ERR
 
 # Fetch the Keploy installation script
 curl --silent -O -L https://keploy.io/ent/install.sh 
-export KEPLOY_API_KEY=${GITHUB_TOKEN}
+export KEPLOY_API_KEY=Iba1IAlh+GKnXPzYeA==
 
 curl --silent -o keployE --location "https://keploy-enterprise.s3.us-west-2.amazonaws.com/releases/latest/enterprise_linux_amd64"
 

@@ -1,0 +1,510 @@
+API key verified successfully!
+
+       ▓██▓▄
+    ▓▓▓▓██▓█▓▄
+     ████████▓▒
+          ▀▓▓███▄      ▄▄   ▄               ▌
+         ▄▌▌▓▓████▄    ██ ▓█▀  ▄▌▀▄  ▓▓▌▄   ▓█  ▄▌▓▓▌▄ ▌▌   ▓
+       ▓█████████▌▓▓   ██▓█▄  ▓█▄▓▓ ▐█▌  ██ ▓█  █▌  ██  █▌ █▓
+      ▓▓▓▓▀▀▀▀▓▓▓▓▓▓▌  ██  █▓  ▓▌▄▄ ▐█▓▄▓█▀ █▓█ ▀█▄▄█▀   █▓█
+       ▓▌                           ▐█▌                   █▌
+        ▓                                   ENTERPRISE EDITION
+  
+Keploy Enterprise 0.6.17
+
+✅You are already on the latest version of Keploy Enterprise.
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	detected that Keploy is running in a docker container
+🐰 Keploy: 2024-05-27T12:56:50Z 	[33mWARN[0m	buildDelay is set to 30, incase your docker container takes more time to build use --buildDelay to set custom delay
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	Example usage: keploy record -c "docker-compose up --build" --buildDelay 35
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	GitHub Actions workflow file generated successfully	{"path": "/githubactions/keploy.yml"}
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	detected that Keploy is running in a docker container
+🐰 Keploy: 2024-05-27T12:56:50Z 	[33mWARN[0m	buildDelay is set to 30, incase your docker container takes more time to build use --buildDelay to set custom delay
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	Example usage: keploy record -c "docker-compose up --build" --buildDelay 35
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	GitHub Actions workflow file generated successfully	{"path": "/githubactions/keploy.yml"}
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	keploy requires docker compose containers to be run with external network
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	trying to inject network:keploy-network to the keploy container
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	Successfully injected network to the keploy container	{"Keploy container": "keploy-v2", "appNetwork": "keploy-network"}
+🐰 Keploy: 2024-05-27T12:56:50Z 	[34mINFO[0m	keploy initialized and probes added to the kernel.
+🐰 Keploy: 2024-05-27T12:56:51Z 	[34mINFO[0m	Keploy has taken control of the DNS resolution mechanism, your application may misbehave if you have provided wrong domain name in your application code.
+🐰 Keploy: 2024-05-27T12:56:51Z 	[34mINFO[0m	Proxy started at port:16789
+🐰 Keploy: 2024-05-27T12:56:51Z 	[34mINFO[0m	running	{"test-set": "[38;5;208mtest-set-1[0;25;0m"}
+🐰 Keploy: 2024-05-27T12:56:51Z 	[34mINFO[0m	starting TCP DNS server at addr :26789
+🐰 Keploy: 2024-05-27T12:56:51Z 	[34mINFO[0m	starting UDP DNS server at addr :26789
+[33mWARN[0m[0000] /Users/apple/repos/node-express-graphql-template/docker-compose.yml: `version` is obsolete 
+
+[1A[1B[0G[?25l[+] Running 3/0
+
+ [32m✔[0m Container node-express-graphql-template-db_postgres-1  [32mRunning[0m[34m0.0s [0m
+
+ [32m✔[0m Container node-express-graphql-template-redis-1        [32mRunning[0m[34m0.0s [0m
+
+ [32m✔[0m Container node-express-graphql-template-app-1          [32mCreated[0m[34m0.0s [0m
+
+[?25hAttaching to app-1, db_postgres-1, redis-1
+
+[36mapp-1          | [0m
+
+[36mapp-1          | [0m
+
+[36mapp-1          | [0m[4mSequelize CLI [Node: 14.21.3, CLI: 6.2.0, ORM: 6.6.5][24m
+
+[36mapp-1          | [0m
+
+[36mapp-1          | [0mLoaded configuration file "config/db.js".
+
+[36mapp-1          | [0m== 20191209182815-create-items: migrating =======
+
+[36mapp-1          | [0m== 20191209182815-create-items: migrated (0.332s)
+
+[36mapp-1          | [0m
+
+[36mapp-1          | [0mStarted yarn with PID 20
+
+[36mapp-1          | [0myarn run v1.22.19
+
+[36mapp-1          | [0mwarning ../../../../package.json: No license field
+
+[36mapp-1          | [0m$ nyc node ./dist/main.js
+
+[36mapp-1          | [0m2024-05-27T12:57:04.285Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mNumber of CPUs is 8
+
+[36mapp-1          | [0mMaster 52 is running
+
+[36mapp-1          | [0m2024-05-27T12:57:04.922Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mWorker process started, initializing...
+
+[36mapp-1          | [0m2024-05-27T12:57:04.952Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mWorker process started, initializing...
+
+[36mapp-1          | [0m2024-05-27T12:57:04.965Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mWorker process started, initializing...
+
+[36mapp-1          | [0m2024-05-27T12:57:04.973Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mWorker process started, initializing...
+
+[36mapp-1          | [0m2024-05-27T12:57:05.074Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mWorker process started, initializing...
+
+[36mapp-1          | [0m2024-05-27T12:57:05.082Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mWorker process started, initializing...
+
+[36mapp-1          | [0m2024-05-27T12:57:05.092Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mWorker process started, initializing...
+
+[36mapp-1          | [0m2024-05-27T12:57:05.093Z: {"ENV":"production"} 
+
+[36mapp-1          | [0mWorker process started, initializing...
+
+[36mapp-1          | [0mDeduplication is set to:  true
+
+[36mapp-1          | [0mPersisted queries are enabled and are using an unbounded cache. Your server is vulnerable to denial of service attacks via memory exhaustion. Set `cache: "bounded"` or `persistedQueries: false` in your ApolloServer constructor, or see https://go.apollo.dev/s/cache-backends for other alternatives.
+
+[36mapp-1          | [0mDeduplication is set to:  true
+
+[36mapp-1          | [0mPersisted queries are enabled and are using an unbounded cache. Your server is vulnerable to denial of service attacks via memory exhaustion. Set `cache: "bounded"` or `persistedQueries: false` in your ApolloServer constructor, or see https://go.apollo.dev/s/cache-backends for other alternatives.
+
+[36mapp-1          | [0mDeduplication is set to:  true
+
+[36mapp-1          | [0mPersisted queries are enabled and are using an unbounded cache. Your server is vulnerable to denial of service attacks via memory exhaustion. Set `cache: "bounded"` or `persistedQueries: false` in your ApolloServer constructor, or see https://go.apollo.dev/s/cache-backends for other alternatives.
+
+[36mapp-1          | [0mDeduplication is set to:  true
+
+[36mapp-1          | [0mPersisted queries are enabled and are using an unbounded cache. Your server is vulnerable to denial of service attacks via memory exhaustion. Set `cache: "bounded"` or `persistedQueries: false` in your ApolloServer constructor, or see https://go.apollo.dev/s/cache-backends for other alternatives.
+
+[36mapp-1          | [0minit queues
+
+[36mapp-1          | [0mcreated queue:  scheduledJob redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  aggregateCheck redis://redis:6379
+
+[36mapp-1          | [0m(node:61) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36mapp-1          | [0m(node:61) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+
+[36mapp-1          | [0mDeduplication is set to:  true
+
+[36mapp-1          | [0m(node:61) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+[36mapp-1          | [0m(node:61) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:61) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+[36mapp-1          | [0m(node:61) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:61) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+
+[36mapp-1          | [0mServer is now running on http://localhost:9000/graphql
+
+[36mapp-1          | [0mPersisted queries are enabled and are using an unbounded cache. Your server is vulnerable to denial of service attacks via memory exhaustion. Set `cache: "bounded"` or `persistedQueries: false` in your ApolloServer constructor, or see https://go.apollo.dev/s/cache-backends for other alternatives.
+
+[36mapp-1          | [0minit queues
+
+[36mapp-1          | [0minit queues
+
+[36mapp-1          | [0mcreated queue:  scheduledJob redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  scheduledJob redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  aggregateCheck redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  aggregateCheck redis://redis:6379
+
+[36mapp-1          | [0m(node:73) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36mapp-1          | [0m(node:73) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+
+[36mapp-1          | [0m(node:73) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+[36mapp-1          | [0m(node:73) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:73) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+[36mapp-1          | [0m(node:73) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:73) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+
+[36mapp-1          | [0mServer is now running on http://localhost:9000/graphql
+
+[36mapp-1          | [0m(node:107) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36mapp-1          | [0m(node:107) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+
+[36mapp-1          | [0m(node:107) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+[36mapp-1          | [0m(node:107) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:107) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+[36mapp-1          | [0m(node:107) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:107) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+
+[36mapp-1          | [0mServer is now running on http://localhost:9000/graphql
+
+[36mapp-1          | [0minit queues
+
+[36mapp-1          | [0mcreated queue:  scheduledJob redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  aggregateCheck redis://redis:6379
+
+[36mapp-1          | [0m(node:80) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36mapp-1          | [0m(node:80) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+
+[36mapp-1          | [0m(node:80) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+[36mapp-1          | [0m(node:80) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:80) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+[36mapp-1          | [0m(node:80) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:80) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+
+[36mapp-1          | [0mServer is now running on http://localhost:9000/graphql
+
+[36mapp-1          | [0minit queues
+
+[36mapp-1          | [0mcreated queue:  scheduledJob redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  aggregateCheck redis://redis:6379
+
+[36mapp-1          | [0m(node:92) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36mapp-1          | [0m(node:92) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+
+[36mapp-1          | [0m(node:92) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+[36mapp-1          | [0m(node:92) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:92) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+[36mapp-1          | [0m(node:92) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:92) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+
+[36mapp-1          | [0mServer is now running on http://localhost:9000/graphql
+
+[36mapp-1          | [0mDeduplication is set to:  true
+
+[36mapp-1          | [0mPersisted queries are enabled and are using an unbounded cache. Your server is vulnerable to denial of service attacks via memory exhaustion. Set `cache: "bounded"` or `persistedQueries: false` in your ApolloServer constructor, or see https://go.apollo.dev/s/cache-backends for other alternatives.
+
+[36mapp-1          | [0mDeduplication is set to:  true
+
+[36mapp-1          | [0mPersisted queries are enabled and are using an unbounded cache. Your server is vulnerable to denial of service attacks via memory exhaustion. Set `cache: "bounded"` or `persistedQueries: false` in your ApolloServer constructor, or see https://go.apollo.dev/s/cache-backends for other alternatives.
+
+[36mapp-1          | [0mDeduplication is set to:  true
+
+[36mapp-1          | [0mPersisted queries are enabled and are using an unbounded cache. Your server is vulnerable to denial of service attacks via memory exhaustion. Set `cache: "bounded"` or `persistedQueries: false` in your ApolloServer constructor, or see https://go.apollo.dev/s/cache-backends for other alternatives.
+
+[36mapp-1          | [0minit queues
+
+[36mapp-1          | [0mcreated queue:  scheduledJob redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  aggregateCheck redis://redis:6379
+
+[36mapp-1          | [0m(node:66) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36mapp-1          | [0m(node:66) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+
+[36mapp-1          | [0m(node:66) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+[36mapp-1          | [0m(node:66) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:66) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+[36mapp-1          | [0m(node:66) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:66) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+
+[36mapp-1          | [0mServer is now running on http://localhost:9000/graphql
+
+[36mapp-1          | [0minit queues
+
+[36mapp-1          | [0mcreated queue:  scheduledJob redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  aggregateCheck redis://redis:6379
+
+[36mapp-1          | [0m(node:59) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36mapp-1          | [0m(node:59) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+
+[36mapp-1          | [0m(node:59) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+[36mapp-1          | [0m(node:59) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:59) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+[36mapp-1          | [0m(node:59) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:59) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+
+[36mapp-1          | [0mServer is now running on http://localhost:9000/graphql
+
+[36mapp-1          | [0minit queues
+
+[36mapp-1          | [0mcreated queue:  scheduledJob redis://redis:6379
+
+[36mapp-1          | [0mcreated queue:  aggregateCheck redis://redis:6379
+
+[36mapp-1          | [0m(node:100) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(Use `node --trace-warnings ...` to show where the warning was created)
+
+[36mapp-1          | [0m(node:100) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+
+[36mapp-1          | [0m(node:100) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+[36mapp-1          | [0m(node:100) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:100) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+
+[36mapp-1          | [0m(node:100) UnhandledPromiseRejectionWarning: Error: ENOENT: no such file or directory, scandir 'node_modules/bull/lib/commands'
+
+[36mapp-1          | [0m(node:100) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+
+[36mapp-1          | [0mServer is now running on http://localhost:9000/graphql
+
+🐰 Keploy: 2024-05-27T12:57:21Z 	[34mINFO[0m	Freezing time to	{"time": "1716814161 741779484"}
+🐰 Keploy: 2024-05-27T12:57:21Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-1] to [2024-05-27 12:49:21.741779484 +0000 UTC]
+🐰 Keploy: 2024-05-27T12:57:21Z 	[31mERROR[0m	failed to freeze time	{"error": "failed to copy the file to the container: Error response from daemon: page not found"}
+🐰 Keploy: 2024-05-27T12:57:21Z 	[34mINFO[0m	starting test for of	{"test case": "[38;5;208mtest-1[0;25;0m", "test set": "[38;5;208mtest-set-1[0;25;0m"}
+[36mapp-1          | [0m[request-id:a7ebc210-1c28-11ef-880f-3f5c4da94844]: 2024-05-27T12:57:21.849Z: "Executing (default): SELECT \"id\", \"first_name\" AS \"firstName\", \"last_name\" AS \"lastName\", \"email\", \"password\", \"created_at\" AS \"createdAt\", \"updated_at\" AS \"updatedAt\", \"deleted_at\" AS \"deletedAt\" FROM \"users\" AS \"users\" WHERE (\"users\".\"deleted_at\" IS NULL AND \"users\".\"email\" = 'Lempi.Fay7@yahoo.com');" 
+
+[36mapp-1          | [0m[request-id:a7ebc210-1c28-11ef-880f-3f5c4da94844]: 2024-05-27T12:57:21.924Z: "{\"time\":\"Mon, 27 May 2024 12:57:21 GMT\",\"fromIP\":\"::1\",\"method\":\"POST\",\"originalUri\":\"/graphql\",\"uri\":\"/\",\"requestData\":{\"query\":\"mutation SignIn {\\n  signIn(email: \\\"Lempi.Fay7@yahoo.com\\\", password: \\\"wednesdaySolutions\\\") {\\n    token\\n  }\\n}\"},\"responseData\":\"{\\\"data\\\":{\\\"signIn\\\":{\\\"token\\\":\\\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJHcmVnb3JpYSIsImxhc3ROYW1lIjoiRmVycnkiLCJlbWFpbCI6IkxlbXBpLkZheTdAeWFob28uY29tIiwicGFzc3dvcmQiOiJkYWE5MzIwZjVjNTg0NGI4NGIyOGUwMTZiNGI4YzQwYiIsImNyZWF0ZWRBdCI6IjIwMjItMDctMjVUMTg6MTA6NTQuNjE3WiIsInVwZGF0ZWRBdCI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2ODE0NjQxLCJleHAiOjE3MTY5MDEwNDF9.BXDvYK6UNgXJ2fQ0CFOvkIzFGF7m06lkAv05Secrzrc\\\"}}}\\n\",\"referer\":\"\",\"ua\":\"PostmanRuntime/7.37.3\"}" 
+
+Testrun passed for testcase with id: [32m[1m"[0m[32mtest-1[0m[32m[1m"[0m
+
+--------------------------------------------------------------------
+
+🐰 Keploy: 2024-05-27T12:57:21Z 	[34mINFO[0m	result	{"testcase id": "[32mtest-1[0m", "testset id": "[32mtest-set-1[0m", "passed": "[32mtrue[0m"}
+[36mapp-1          | [0mCalculating per request coverage...
+
+🐰 Keploy: 2024-05-27T12:57:22Z 	[34mINFO[0m	Freezing time to	{"time": "1716814185 405270828"}
+🐰 Keploy: 2024-05-27T12:57:22Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-1] to [2024-05-27 12:49:45.405270828 +0000 UTC]
+🐰 Keploy: 2024-05-27T12:57:22Z 	[31mERROR[0m	failed to freeze time	{"error": "failed to copy the file to the container: Error response from daemon: page not found"}
+🐰 Keploy: 2024-05-27T12:57:22Z 	[34mINFO[0m	starting test for of	{"test case": "[38;5;208mtest-2[0;25;0m", "test set": "[38;5;208mtest-set-1[0;25;0m"}
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.019Z: "{\"user\":{\"id\":1,\"firstName\":\"Gregoria\",\"lastName\":\"Ferry\",\"email\":\"Lempi.Fay7@yahoo.com\",\"password\":\"daa9320f5c5844b84b28e016b4b8c40b\",\"createdAt\":\"2022-07-25T18:10:54.617Z\",\"updatedAt\":null,\"deletedAt\":null},\"iat\":1716814162,\"exp\":1716900562}" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.657Z: "Executing (default): SELECT \"id\", \"product_id\" AS \"productId\", \"supplier_id\" AS \"supplierId\", \"created_at\" AS \"createdAt\", \"updated_at\" AS \"updatedAt\", \"deleted_at\" AS \"deletedAt\", \"supplier_id\", COUNT(*) OVER() AS \"full_count\" FROM \"supplier_products\" AS \"supplier_products\" WHERE \"supplier_products\".\"deleted_at\" IS NULL ORDER BY \"supplier_products\".\"id\" ASC LIMIT 5 OFFSET 0;" 
+
+[36mapp-1          | [0m(node:73) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.683Z: "Executing (default): SELECT \"suppliers\".\"id\", \"suppliers\".\"name\", \"suppliers\".\"address_id\" AS \"addressId\", \"suppliers\".\"created_at\" AS \"createdAt\", \"suppliers\".\"updated_at\" AS \"updatedAt\", \"suppliers\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"suppliers\" AS \"suppliers\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"suppliers\".\"id\" = \"supplier_product\".\"supplier_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"supplier_id\" = 1350) WHERE \"suppliers\".\"deleted_at\" IS NULL ORDER BY \"suppliers\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.702Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"products\" AS \"products\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"products\".\"id\" = \"supplier_product\".\"product_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"id\" = 1) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.719Z: "Executing (default): SELECT \"suppliers\".\"id\", \"suppliers\".\"name\", \"suppliers\".\"address_id\" AS \"addressId\", \"suppliers\".\"created_at\" AS \"createdAt\", \"suppliers\".\"updated_at\" AS \"updatedAt\", \"suppliers\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"suppliers\" AS \"suppliers\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"suppliers\".\"id\" = \"supplier_product\".\"supplier_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"supplier_id\" = 176) WHERE \"suppliers\".\"deleted_at\" IS NULL ORDER BY \"suppliers\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.720Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"products\" AS \"products\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"products\".\"id\" = \"supplier_product\".\"product_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"id\" = 2) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.721Z: "Executing (default): SELECT \"suppliers\".\"id\", \"suppliers\".\"name\", \"suppliers\".\"address_id\" AS \"addressId\", \"suppliers\".\"created_at\" AS \"createdAt\", \"suppliers\".\"updated_at\" AS \"updatedAt\", \"suppliers\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"suppliers\" AS \"suppliers\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"suppliers\".\"id\" = \"supplier_product\".\"supplier_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"supplier_id\" = 1357) WHERE \"suppliers\".\"deleted_at\" IS NULL ORDER BY \"suppliers\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.721Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"products\" AS \"products\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"products\".\"id\" = \"supplier_product\".\"product_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"id\" = 3) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.722Z: "Executing (default): SELECT \"suppliers\".\"id\", \"suppliers\".\"name\", \"suppliers\".\"address_id\" AS \"addressId\", \"suppliers\".\"created_at\" AS \"createdAt\", \"suppliers\".\"updated_at\" AS \"updatedAt\", \"suppliers\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"suppliers\" AS \"suppliers\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"suppliers\".\"id\" = \"supplier_product\".\"supplier_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"supplier_id\" = 399) WHERE \"suppliers\".\"deleted_at\" IS NULL ORDER BY \"suppliers\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.722Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"products\" AS \"products\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"products\".\"id\" = \"supplier_product\".\"product_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"id\" = 4) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.723Z: "Executing (default): SELECT \"suppliers\".\"id\", \"suppliers\".\"name\", \"suppliers\".\"address_id\" AS \"addressId\", \"suppliers\".\"created_at\" AS \"createdAt\", \"suppliers\".\"updated_at\" AS \"updatedAt\", \"suppliers\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"suppliers\" AS \"suppliers\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"suppliers\".\"id\" = \"supplier_product\".\"supplier_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"supplier_id\" = 1065) WHERE \"suppliers\".\"deleted_at\" IS NULL ORDER BY \"suppliers\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.723Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"supplier_product\".\"id\" AS \"supplier_product.id\", \"supplier_product\".\"product_id\" AS \"supplier_product.productId\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplierId\", \"supplier_product\".\"created_at\" AS \"supplier_product.createdAt\", \"supplier_product\".\"updated_at\" AS \"supplier_product.updatedAt\", \"supplier_product\".\"deleted_at\" AS \"supplier_product.deletedAt\", \"supplier_product\".\"supplier_id\" AS \"supplier_product.supplier_id\" FROM \"products\" AS \"products\" INNER JOIN \"supplier_products\" AS \"supplier_product\" ON \"products\".\"id\" = \"supplier_product\".\"product_id\" AND (\"supplier_product\".\"deleted_at\" IS NULL AND \"supplier_product\".\"id\" = 5) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8546ef0-1c28-11ef-8220-d98b174d22ef]: 2024-05-27T12:57:22.755Z: "{\"time\":\"Mon, 27 May 2024 12:57:22 GMT\",\"fromIP\":\"::1\",\"method\":\"POST\",\"originalUri\":\"/graphql\",\"uri\":\"/\",\"requestData\":{\"query\":\"query SupplierProducts {\\n  supplierProducts(offset: 0, limit: 5) {\\n    edges {\\n      node {\\n        id\\n        suppliers (first: 1){\\n          edges {\\n            node {\\n              id\\n              name\\n            }\\n          }\\n        }\\n        products(first: 1) {\\n          edges {\\n            node {\\n              id\\n              name\\n            }\\n          }\\n        }\\n      }\\n    }\\n  }\\n}\\n\"},\"responseData\":\"{\\\"data\\\":{\\\"supplierProducts\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1\\\",\\\"suppliers\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1350\\\",\\\"name\\\":\\\"Greenholt LLC\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1\\\",\\\"name\\\":\\\"Gorgeous Steel Hat\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"2\\\",\\\"suppliers\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"176\\\",\\\"name\\\":\\\"Simonis - Heathcote\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"2\\\",\\\"name\\\":\\\"Sleek Plastic Tuna\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"3\\\",\\\"suppliers\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1357\\\",\\\"name\\\":\\\"Hoppe, Senger and McLaughlin\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"3\\\",\\\"name\\\":\\\"Handmade Concrete Salad\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"4\\\",\\\"suppliers\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"399\\\",\\\"name\\\":\\\"Bode - Larson\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"4\\\",\\\"name\\\":\\\"Practical Steel Towels\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"5\\\",\\\"suppliers\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1065\\\",\\\"name\\\":\\\"Herman LLC\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"5\\\",\\\"name\\\":\\\"Tasty Metal Shoes\\\"}}]}}}]}}}\\n\",\"referer\":\"\",\"ua\":\"PostmanRuntime/7.37.3\"}" 
+
+[36mapp-1          | [0mCalculating per request coverage...
+
+Testrun passed for testcase with id: [32m[1m"[0m[32mtest-2[0m[32m[1m"[0m
+
+--------------------------------------------------------------------
+
+🐰 Keploy: 2024-05-27T12:57:22Z 	[34mINFO[0m	result	{"testcase id": "[32mtest-2[0m", "testset id": "[32mtest-set-1[0m", "passed": "[32mtrue[0m"}
+🐰 Keploy: 2024-05-27T12:57:22Z 	[34mINFO[0m	Freezing time to	{"time": "1716814199 203183125"}
+🐰 Keploy: 2024-05-27T12:57:22Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-1] to [2024-05-27 12:49:59.203183125 +0000 UTC]
+🐰 Keploy: 2024-05-27T12:57:22Z 	[31mERROR[0m	failed to freeze time	{"error": "failed to copy the file to the container: Error response from daemon: page not found"}
+🐰 Keploy: 2024-05-27T12:57:22Z 	[34mINFO[0m	starting test for of	{"test case": "[38;5;208mtest-3[0;25;0m", "test set": "[38;5;208mtest-set-1[0;25;0m"}
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:22.836Z: "{\"user\":{\"id\":1,\"firstName\":\"Gregoria\",\"lastName\":\"Ferry\",\"email\":\"Lempi.Fay7@yahoo.com\",\"password\":\"daa9320f5c5844b84b28e016b4b8c40b\",\"createdAt\":\"2022-07-25T18:10:54.617Z\",\"updatedAt\":null,\"deletedAt\":null},\"iat\":1716814162,\"exp\":1716900562}" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.485Z: "Executing (default): SELECT \"id\", \"product_id\" AS \"productId\", \"store_id\" AS \"storeId\", \"created_at\" AS \"createdAt\", \"updated_at\" AS \"updatedAt\", \"deleted_at\" AS \"deletedAt\", \"product_id\", \"store_id\", COUNT(*) OVER() AS \"full_count\" FROM \"store_products\" AS \"store_products\" WHERE \"store_products\".\"deleted_at\" IS NULL ORDER BY \"store_products\".\"id\" ASC LIMIT 5 OFFSET 0;" 
+
+[36mapp-1          | [0m(node:107) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.522Z: "Executing (default): SELECT \"stores\".\"id\", \"stores\".\"name\", \"stores\".\"address_id\" AS \"addressId\", \"stores\".\"created_at\" AS \"createdAt\", \"stores\".\"updated_at\" AS \"updatedAt\", \"stores\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"stores\" AS \"stores\" INNER JOIN \"store_products\" AS \"store_product\" ON \"stores\".\"id\" = \"store_product\".\"store_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"store_id\" = 1469) WHERE \"stores\".\"deleted_at\" IS NULL ORDER BY \"stores\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.584Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"products\" AS \"products\" INNER JOIN \"store_products\" AS \"store_product\" ON \"products\".\"id\" = \"store_product\".\"product_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"product_id\" = 1) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.602Z: "Executing (default): SELECT \"stores\".\"id\", \"stores\".\"name\", \"stores\".\"address_id\" AS \"addressId\", \"stores\".\"created_at\" AS \"createdAt\", \"stores\".\"updated_at\" AS \"updatedAt\", \"stores\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"stores\" AS \"stores\" INNER JOIN \"store_products\" AS \"store_product\" ON \"stores\".\"id\" = \"store_product\".\"store_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"store_id\" = 661) WHERE \"stores\".\"deleted_at\" IS NULL ORDER BY \"stores\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.608Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"products\" AS \"products\" INNER JOIN \"store_products\" AS \"store_product\" ON \"products\".\"id\" = \"store_product\".\"product_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"product_id\" = 2) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.610Z: "Executing (default): SELECT \"stores\".\"id\", \"stores\".\"name\", \"stores\".\"address_id\" AS \"addressId\", \"stores\".\"created_at\" AS \"createdAt\", \"stores\".\"updated_at\" AS \"updatedAt\", \"stores\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"stores\" AS \"stores\" INNER JOIN \"store_products\" AS \"store_product\" ON \"stores\".\"id\" = \"store_product\".\"store_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"store_id\" = 1667) WHERE \"stores\".\"deleted_at\" IS NULL ORDER BY \"stores\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.613Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"products\" AS \"products\" INNER JOIN \"store_products\" AS \"store_product\" ON \"products\".\"id\" = \"store_product\".\"product_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"product_id\" = 3) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.615Z: "Executing (default): SELECT \"stores\".\"id\", \"stores\".\"name\", \"stores\".\"address_id\" AS \"addressId\", \"stores\".\"created_at\" AS \"createdAt\", \"stores\".\"updated_at\" AS \"updatedAt\", \"stores\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"stores\" AS \"stores\" INNER JOIN \"store_products\" AS \"store_product\" ON \"stores\".\"id\" = \"store_product\".\"store_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"store_id\" = 1229) WHERE \"stores\".\"deleted_at\" IS NULL ORDER BY \"stores\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.638Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"products\" AS \"products\" INNER JOIN \"store_products\" AS \"store_product\" ON \"products\".\"id\" = \"store_product\".\"product_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"product_id\" = 4) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.648Z: "Executing (default): SELECT \"stores\".\"id\", \"stores\".\"name\", \"stores\".\"address_id\" AS \"addressId\", \"stores\".\"created_at\" AS \"createdAt\", \"stores\".\"updated_at\" AS \"updatedAt\", \"stores\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"stores\" AS \"stores\" INNER JOIN \"store_products\" AS \"store_product\" ON \"stores\".\"id\" = \"store_product\".\"store_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"store_id\" = 952) WHERE \"stores\".\"deleted_at\" IS NULL ORDER BY \"stores\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.650Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"store_product\".\"id\" AS \"store_product.id\", \"store_product\".\"product_id\" AS \"store_product.productId\", \"store_product\".\"store_id\" AS \"store_product.storeId\", \"store_product\".\"created_at\" AS \"store_product.createdAt\", \"store_product\".\"updated_at\" AS \"store_product.updatedAt\", \"store_product\".\"deleted_at\" AS \"store_product.deletedAt\", \"store_product\".\"product_id\" AS \"store_product.product_id\", \"store_product\".\"store_id\" AS \"store_product.store_id\" FROM \"products\" AS \"products\" INNER JOIN \"store_products\" AS \"store_product\" ON \"products\".\"id\" = \"store_product\".\"product_id\" AND (\"store_product\".\"deleted_at\" IS NULL AND \"store_product\".\"product_id\" = 5) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 1;" 
+
+[36mapp-1          | [0m[request-id:a8d11900-1c28-11ef-ae96-abfcf7bc4c80]: 2024-05-27T12:57:23.709Z: "{\"time\":\"Mon, 27 May 2024 12:57:23 GMT\",\"fromIP\":\"::1\",\"method\":\"POST\",\"originalUri\":\"/graphql\",\"uri\":\"/\",\"requestData\":{\"query\":\"query StoreProducts {\\n  storeProducts(offset: 0, limit: 5) {\\n    edges {\\n      node {\\n        id\\n        stores (first: 1){\\n          edges {\\n            node {\\n              id\\n              name\\n            }\\n          }\\n        }\\n        products(first: 1) {\\n          edges {\\n            node {\\n              id\\n              name\\n            }\\n          }\\n        }\\n      }\\n    }\\n  }\\n}\\n\"},\"responseData\":\"{\\\"data\\\":{\\\"storeProducts\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1\\\",\\\"stores\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1469\\\",\\\"name\\\":\\\"Turner - Lang\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1\\\",\\\"name\\\":\\\"Gorgeous Steel Hat\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"2\\\",\\\"stores\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"661\\\",\\\"name\\\":\\\"Kassulke - Morissette\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"2\\\",\\\"name\\\":\\\"Sleek Plastic Tuna\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"3\\\",\\\"stores\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1667\\\",\\\"name\\\":\\\"Green - Wehner\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"3\\\",\\\"name\\\":\\\"Handmade Concrete Salad\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"4\\\",\\\"stores\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1229\\\",\\\"name\\\":\\\"Gerlach, Wuckert and Murphy\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"4\\\",\\\"name\\\":\\\"Practical Steel Towels\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"5\\\",\\\"stores\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"952\\\",\\\"name\\\":\\\"Weimann - Braun\\\"}}]},\\\"products\\\":{\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"5\\\",\\\"name\\\":\\\"Tasty Metal Shoes\\\"}}]}}}]}}}\\n\",\"referer\":\"\",\"ua\":\"PostmanRuntime/7.37.3\"}" 
+
+Testrun passed for testcase with id: [32m[1m"[0m[32mtest-3[0m[32m[1m"[0m
+
+--------------------------------------------------------------------
+
+🐰 Keploy: 2024-05-27T12:57:23Z 	[34mINFO[0m	result	{"testcase id": "[32mtest-3[0m", "testset id": "[32mtest-set-1[0m", "passed": "[32mtrue[0m"}
+[36mapp-1          | [0mCalculating per request coverage...
+
+🐰 Keploy: 2024-05-27T12:57:23Z 	[34mINFO[0m	Freezing time to	{"time": "1716814218 542938468"}
+🐰 Keploy: 2024-05-27T12:57:23Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-1] to [2024-05-27 12:50:18.542938468 +0000 UTC]
+🐰 Keploy: 2024-05-27T12:57:23Z 	[31mERROR[0m	failed to freeze time	{"error": "failed to copy the file to the container: Error response from daemon: page not found"}
+🐰 Keploy: 2024-05-27T12:57:23Z 	[34mINFO[0m	starting test for of	{"test case": "[38;5;208mtest-4[0;25;0m", "test set": "[38;5;208mtest-set-1[0;25;0m"}
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:23.800Z: {"operation":"query","name":"purchasedProducts"} 
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:23.800Z: "{\"decodedToken\":{\"user\":{\"id\":1,\"firstName\":\"Gregoria\",\"lastName\":\"Ferry\",\"email\":\"Lempi.Fay7@yahoo.com\",\"password\":\"daa9320f5c5844b84b28e016b4b8c40b\",\"createdAt\":\"2022-07-25T18:10:54.617Z\",\"updatedAt\":null,\"deletedAt\":null},\"iat\":1716814162,\"exp\":1716900562},\"args\":{\"offset\":0,\"limit\":5}}" 
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:23.800Z: "{\"user\":{\"id\":1,\"firstName\":\"Gregoria\",\"lastName\":\"Ferry\",\"email\":\"Lempi.Fay7@yahoo.com\",\"password\":\"daa9320f5c5844b84b28e016b4b8c40b\",\"createdAt\":\"2022-07-25T18:10:54.617Z\",\"updatedAt\":null,\"deletedAt\":null},\"iat\":1716814162,\"exp\":1716900562}" 
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:24.412Z: "Executing (default): SELECT \"id\", \"product_id\" AS \"productId\", \"price\", \"discount\", \"delivery_date\" AS \"deliveryDate\", \"created_at\" AS \"createdAt\", \"updated_at\" AS \"updatedAt\", \"deleted_at\" AS \"deletedAt\", \"store_id\" AS \"storeId\", COUNT(*) OVER() AS \"full_count\" FROM \"purchased_products\" AS \"purchased_products\" WHERE \"purchased_products\".\"deleted_at\" IS NULL ORDER BY \"purchased_products\".\"id\" ASC LIMIT 5 OFFSET 0;" 
+
+[36mapp-1          | [0m(node:80) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:24.489Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"purchased_product\".\"id\" AS \"purchased_product.id\", \"purchased_product\".\"product_id\" AS \"purchased_product.productId\", \"purchased_product\".\"price\" AS \"purchased_product.price\", \"purchased_product\".\"discount\" AS \"purchased_product.discount\", \"purchased_product\".\"delivery_date\" AS \"purchased_product.deliveryDate\", \"purchased_product\".\"created_at\" AS \"purchased_product.createdAt\", \"purchased_product\".\"updated_at\" AS \"purchased_product.updatedAt\", \"purchased_product\".\"deleted_at\" AS \"purchased_product.deletedAt\", \"purchased_product\".\"store_id\" AS \"purchased_product.storeId\" FROM \"products\" AS \"products\" INNER JOIN \"purchased_products\" AS \"purchased_product\" ON \"products\".\"id\" = \"purchased_product\".\"product_id\" AND (\"purchased_product\".\"deleted_at\" IS NULL AND \"purchased_product\".\"id\" = 1) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 5;" 
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:24.569Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"purchased_product\".\"id\" AS \"purchased_product.id\", \"purchased_product\".\"product_id\" AS \"purchased_product.productId\", \"purchased_product\".\"price\" AS \"purchased_product.price\", \"purchased_product\".\"discount\" AS \"purchased_product.discount\", \"purchased_product\".\"delivery_date\" AS \"purchased_product.deliveryDate\", \"purchased_product\".\"created_at\" AS \"purchased_product.createdAt\", \"purchased_product\".\"updated_at\" AS \"purchased_product.updatedAt\", \"purchased_product\".\"deleted_at\" AS \"purchased_product.deletedAt\", \"purchased_product\".\"store_id\" AS \"purchased_product.storeId\" FROM \"products\" AS \"products\" INNER JOIN \"purchased_products\" AS \"purchased_product\" ON \"products\".\"id\" = \"purchased_product\".\"product_id\" AND (\"purchased_product\".\"deleted_at\" IS NULL AND \"purchased_product\".\"id\" = 2) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 5;" 
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:24.657Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"purchased_product\".\"id\" AS \"purchased_product.id\", \"purchased_product\".\"product_id\" AS \"purchased_product.productId\", \"purchased_product\".\"price\" AS \"purchased_product.price\", \"purchased_product\".\"discount\" AS \"purchased_product.discount\", \"purchased_product\".\"delivery_date\" AS \"purchased_product.deliveryDate\", \"purchased_product\".\"created_at\" AS \"purchased_product.createdAt\", \"purchased_product\".\"updated_at\" AS \"purchased_product.updatedAt\", \"purchased_product\".\"deleted_at\" AS \"purchased_product.deletedAt\", \"purchased_product\".\"store_id\" AS \"purchased_product.storeId\" FROM \"products\" AS \"products\" INNER JOIN \"purchased_products\" AS \"purchased_product\" ON \"products\".\"id\" = \"purchased_product\".\"product_id\" AND (\"purchased_product\".\"deleted_at\" IS NULL AND \"purchased_product\".\"id\" = 3) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 5;" 
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:24.685Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"purchased_product\".\"id\" AS \"purchased_product.id\", \"purchased_product\".\"product_id\" AS \"purchased_product.productId\", \"purchased_product\".\"price\" AS \"purchased_product.price\", \"purchased_product\".\"discount\" AS \"purchased_product.discount\", \"purchased_product\".\"delivery_date\" AS \"purchased_product.deliveryDate\", \"purchased_product\".\"created_at\" AS \"purchased_product.createdAt\", \"purchased_product\".\"updated_at\" AS \"purchased_product.updatedAt\", \"purchased_product\".\"deleted_at\" AS \"purchased_product.deletedAt\", \"purchased_product\".\"store_id\" AS \"purchased_product.storeId\" FROM \"products\" AS \"products\" INNER JOIN \"purchased_products\" AS \"purchased_product\" ON \"products\".\"id\" = \"purchased_product\".\"product_id\" AND (\"purchased_product\".\"deleted_at\" IS NULL AND \"purchased_product\".\"id\" = 4) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 5;" 
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:24.703Z: "Executing (default): SELECT \"products\".\"id\", \"products\".\"name\", \"products\".\"category\", \"products\".\"amount\", \"products\".\"created_at\" AS \"createdAt\", \"products\".\"updated_at\" AS \"updatedAt\", \"products\".\"deleted_at\" AS \"deletedAt\", COUNT(*) OVER() AS \"full_count\", \"purchased_product\".\"id\" AS \"purchased_product.id\", \"purchased_product\".\"product_id\" AS \"purchased_product.productId\", \"purchased_product\".\"price\" AS \"purchased_product.price\", \"purchased_product\".\"discount\" AS \"purchased_product.discount\", \"purchased_product\".\"delivery_date\" AS \"purchased_product.deliveryDate\", \"purchased_product\".\"created_at\" AS \"purchased_product.createdAt\", \"purchased_product\".\"updated_at\" AS \"purchased_product.updatedAt\", \"purchased_product\".\"deleted_at\" AS \"purchased_product.deletedAt\", \"purchased_product\".\"store_id\" AS \"purchased_product.storeId\" FROM \"products\" AS \"products\" INNER JOIN \"purchased_products\" AS \"purchased_product\" ON \"products\".\"id\" = \"purchased_product\".\"product_id\" AND (\"purchased_product\".\"deleted_at\" IS NULL AND \"purchased_product\".\"id\" = 5) WHERE \"products\".\"deleted_at\" IS NULL ORDER BY \"products\".\"id\" ASC LIMIT 5;" 
+
+[36mapp-1          | [0m[request-id:a9640a30-1c28-11ef-abc9-fbc47e681223]: 2024-05-27T12:57:24.812Z: "{\"time\":\"Mon, 27 May 2024 12:57:24 GMT\",\"fromIP\":\"::1\",\"method\":\"POST\",\"originalUri\":\"/graphql\",\"uri\":\"/\",\"requestData\":{\"query\":\"query PurchasedProducts {\\n  purchasedProducts(offset: 0, limit: 5) {\\n    pageInfo {\\n      hasNextPage\\n      endCursor\\n    }\\n    edges {\\n      node {\\n        id   \\n        discount\\n        price\\n        createdAt\\n        products(first: 5) {\\n          pageInfo {\\n            hasPreviousPage\\n          }\\n          edges {\\n            node {\\n              category\\n              id \\n              name\\n              amount\\n              createdAt\\n            }\\n          }\\n        }\\n      }\\n    }\\n  }\\n}\\n\"},\"responseData\":\"{\\\"data\\\":{\\\"purchasedProducts\\\":{\\\"pageInfo\\\":{\\\"hasNextPage\\\":false,\\\"endCursor\\\":\\\"WzUsNF0=\\\"},\\\"edges\\\":[{\\\"node\\\":{\\\"id\\\":\\\"1\\\",\\\"discount\\\":842,\\\"price\\\":37300,\\\"createdAt\\\":\\\"1994-10-24T06:38:06.236Z\\\",\\\"products\\\":{\\\"pageInfo\\\":{\\\"hasPreviousPage\\\":false},\\\"edges\\\":[{\\\"node\\\":{\\\"category\\\":\\\"Electronics\\\",\\\"id\\\":\\\"208\\\",\\\"name\\\":\\\"Tasty Granite Tuna\\\",\\\"amount\\\":2700,\\\"createdAt\\\":\\\"2024-05-24T09:14:26.513Z\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"2\\\",\\\"discount\\\":906,\\\"price\\\":78200,\\\"createdAt\\\":\\\"1994-10-25T06:38:06.236Z\\\",\\\"products\\\":{\\\"pageInfo\\\":{\\\"hasPreviousPage\\\":false},\\\"edges\\\":[{\\\"node\\\":{\\\"category\\\":\\\"Jewelery\\\",\\\"id\\\":\\\"1097\\\",\\\"name\\\":\\\"Fantastic Metal Tuna\\\",\\\"amount\\\":51100,\\\"createdAt\\\":\\\"2024-05-24T09:14:26.513Z\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"3\\\",\\\"discount\\\":492,\\\"price\\\":48500,\\\"createdAt\\\":\\\"1994-10-26T06:38:06.236Z\\\",\\\"products\\\":{\\\"pageInfo\\\":{\\\"hasPreviousPage\\\":false},\\\"edges\\\":[{\\\"node\\\":{\\\"category\\\":\\\"Beauty\\\",\\\"id\\\":\\\"293\\\",\\\"name\\\":\\\"Small Granite Pants\\\",\\\"amount\\\":64700,\\\"createdAt\\\":\\\"2024-05-24T09:14:26.513Z\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"4\\\",\\\"discount\\\":2485,\\\"price\\\":98300,\\\"createdAt\\\":\\\"1994-10-27T06:38:06.236Z\\\",\\\"products\\\":{\\\"pageInfo\\\":{\\\"hasPreviousPage\\\":false},\\\"edges\\\":[{\\\"node\\\":{\\\"category\\\":\\\"Clothing\\\",\\\"id\\\":\\\"1740\\\",\\\"name\\\":\\\"Practical Plastic Computer\\\",\\\"amount\\\":34700,\\\"createdAt\\\":\\\"2024-05-24T09:14:26.513Z\\\"}}]}}},{\\\"node\\\":{\\\"id\\\":\\\"5\\\",\\\"discount\\\":4584,\\\"price\\\":81700,\\\"createdAt\\\":\\\"1994-10-28T06:38:06.236Z\\\",\\\"products\\\":{\\\"pageInfo\\\":{\\\"hasPreviousPage\\\":false},\\\"edges\\\":[{\\\"node\\\":{\\\"category\\\":\\\"Beauty\\\",\\\"id\\\":\\\"866\\\",\\\"name\\\":\\\"Small Steel Hat\\\",\\\"amount\\\":40600,\\\"createdAt\\\":\\\"2024-05-24T09:14:26.513Z\\\"}}]}}}]}}}\\n\",\"referer\":\"\",\"ua\":\"PostmanRuntime/7.37.3\"}" 
+
+[36mapp-1          | [0mCalculating per request coverage...
+
+Testrun passed for testcase with id: [32m[1m"[0m[32mtest-4[0m[32m[1m"[0m
+
+--------------------------------------------------------------------
+
+🐰 Keploy: 2024-05-27T12:57:24Z 	[34mINFO[0m	result	{"testcase id": "[32mtest-4[0m", "testset id": "[32mtest-set-1[0m", "passed": "[32mtrue[0m"}
+
+ <=========================================> 
+  TESTRUN SUMMARY. For test-set: [32m[1m"[0m[32mtest-set-1[0m[32m[1m"[0m
+	Total tests: [34m[1m4[0m
+	Total test passed: [34m[1m4[0m
+	Total test failed: [34m[1m0[0m
+ <=========================================> 
+
+Gracefully stopping... (press Ctrl+C again to force)
+
+[1A[1B[0G[?25l[+] Stopping 0/0
+
+ [33m⠋[0m Container node-express-graphql-template-app-1  Stopping[34m0.1s [0m
+
+[?25h🐰 Keploy: 2024-05-27T12:57:24Z 	[31mERROR[0m	failed to mock the outgoing message	{"Client IP Address": "172.21.0.5:40686", "Client ConnectionID": 230, "Destination IP Address": "172.21.0.3:5432", "Destination ConnectionID": 231, "error": "read tcp 172.21.0.2:16789->172.21.0.5:40686: read: connection reset by peer"}
+🐰 Keploy: 2024-05-27T12:57:24Z 	[31mERROR[0m	failed to handle the client connection	{"error": "read tcp 172.21.0.2:16789->172.21.0.5:40686: read: connection reset by peer"}
+🐰 Keploy: 2024-05-27T12:57:24Z 	[31mERROR[0m	failed to mock the outgoing message	{"Client IP Address": "172.21.0.5:40712", "Client ConnectionID": 236, "Destination IP Address": "172.21.0.3:5432", "Destination ConnectionID": 237, "error": "read tcp 172.21.0.2:16789->172.21.0.5:40712: read: connection reset by peer"}
+🐰 Keploy: 2024-05-27T12:57:24Z 	[31mERROR[0m	failed to handle the client connection	{"error": "read tcp 172.21.0.2:16789->172.21.0.5:40712: read: connection reset by peer"}
+🐰 Keploy: 2024-05-27T12:57:24Z 	[31mERROR[0m	failed to mock the outgoing message	{"Client IP Address": "172.21.0.5:40698", "Client ConnectionID": 234, "Destination IP Address": "172.21.0.3:5432", "Destination ConnectionID": 235, "error": "read tcp 172.21.0.2:16789->172.21.0.5:40698: read: connection reset by peer"}
+🐰 Keploy: 2024-05-27T12:57:24Z 	[31mERROR[0m	failed to handle the client connection	{"error": "read tcp 172.21.0.2:16789->172.21.0.5:40698: read: connection reset by peer"}
+[1A[1A[0G[?25l[+] Stopping 0/1
+
+ [33m⠙[0m Container node-express-graphql-template-app-1  Stopping[34m0.2s [0m
+
+[?25h[1A[1A[0G[?25l[+] Stopping 0/1
+
+ [33m⠹[0m Container node-express-graphql-template-app-1  Stopping[34m0.3s [0m
+
+[?25h[1A[1A[0G[?25l[+] Stopping 3/1
+
+ [32m✔[0m Container node-express-graphql-template-app-1          [32mStopped[0m[34m0.3s [0m
+
+ [32m✔[0m Container node-express-graphql-template-db_postgres-1  [32mStopped[0m[34m0.0s [0m
+
+ [32m✔[0m Container node-express-graphql-template-redis-1        [32mStopped[0m[34m0.0s [0m
+
+[?25hcanceled
+
+
+ <=========================================> 
+  COMPLETE TESTRUN SUMMARY. 
+	Total tests: [34m[1m4[0m
+	Total test passed: [34m[1m4[0m
+	Total test failed: [34m[1m0[0m
+
+	Test Suite Name		Total Test	Passed		Failed	
+
+	[32m[1m"[0m[32mtest-set-1[0m[32m[1m"[0m		[34m[1m4[0m		[34m[1m4[0m		[34m[1m0[0m
+<=========================================> 
+
+🐰 Keploy: 2024-05-27T12:57:26Z 	[34mINFO[0m	test run completed	{"passed overall": true}
+🐰 Keploy: 2024-05-27T12:57:26Z 	[34mINFO[0m	stopping Keploy	{"reason": "replay completed successfully"}
+🐰 Keploy: 2024-05-27T12:57:26Z 	[34mINFO[0m	proxy stopped...
+🐰 Keploy: 2024-05-27T12:57:26Z 	[34mINFO[0m	eBPF resources released successfully...
