@@ -39,6 +39,7 @@ test_status1=$(grep 'status:' "$report_file" | head -n 1 | awk '{print $2}')
 
 # Check the test status variables and exit accordingly
 if [ "$test_status1" = "PASSED" ]; then
+    nyc npx report
     echo "All tests passed"
     exit 0
 else

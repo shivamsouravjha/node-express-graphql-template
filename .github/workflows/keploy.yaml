@@ -1,5 +1,9 @@
 name: Keploy
-on: [pull_request,push]
+
+on:
+  pull_request:
+  push:
+
 jobs:
   node_linux:
     runs-on: ubuntu-latest
@@ -7,16 +11,30 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+
     - name: Set up Node.js 16
       uses: actions/setup-node@v2
       with:
         node-version: '16'
-    - name: Install curl
-      run: sudo apt-get update && sudo apt-get install -y curl
+
     - name: Print all environment variables for debugging
       run: printenv
+
+    - name: Install dependencies
+      run: yarn install
+
     - name: Run the node-express-graphql template
       run: |
         source /home/runner/work/node-express-graphql-template/node-express-graphql-template/.github/workflows/testa_workflow_scripts/keploy.sh
       env:
-          GITHUB_TOKEN: ${{ secrets.SECRETS }}
+        GITHUB_TOKEN: ${{ secrets.SECRETS }}
+
+    - name: Run tests with coverage
+      run: yarn test --coverage --coverageReporters=text-lcov
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage/lcov.info
+        verbose: true
