@@ -1,0 +1,56 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-8
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I
+            Connection: keep-alive
+            Content-Length: "432"
+            Content-Type: application/json
+            Host: localhost:9000
+            Postman-Token: 672b615e-2f3d-4d85-9b00-dcb32eef2161
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query Stores {\n  stores (offset: 0, limit:10){\n    edges {\n      node {\n        id\n        name\n        addressId\n        addresses {\n          edges {\n            node {\n              id\n              address1\n            }\n          }\n        }\n        products {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}"}'
+        timestamp: 2024-05-22T10:52:00.240099641Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "2250"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 22 May 2024 10:52:00 GMT
+            Etag: W/"8ca-Z/WQgk2UPDHeSK/Wz9K0tE4nADA"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: |
+            {"data":{"stores":{"edges":[{"node":{"id":"1","name":"Mann and Sons","addressId":505,"addresses":{"edges":[{"node":{"id":"505","address1":"Hand Run"}}]},"products":{"edges":[{"node":{"id":"306","name":"Ergonomic Concrete Sausages"}},{"node":{"id":"1300","name":"Incredible Steel Towels"}},{"node":{"id":"1753","name":"Awesome Cotton Mouse"}},{"node":{"id":"1796","name":"Generic Metal Hat"}}]}}},{"node":{"id":"2","name":"Altenwerth, Schmitt and Goldner","addressId":569,"addresses":{"edges":[{"node":{"id":"569","address1":"Adella Well"}}]},"products":{"edges":[]}}},{"node":{"id":"3","name":"Terry, Pollich and Stark","addressId":654,"addresses":{"edges":[{"node":{"id":"654","address1":"Schamberger Lights"}}]},"products":{"edges":[]}}},{"node":{"id":"4","name":"Waelchi and Sons","addressId":744,"addresses":{"edges":[{"node":{"id":"744","address1":"Sawayn Junctions"}}]},"products":{"edges":[]}}},{"node":{"id":"5","name":"Hartmann - McLaughlin","addressId":1972,"addresses":{"edges":[{"node":{"id":"1972","address1":"Rowe Terrace"}}]},"products":{"edges":[{"node":{"id":"876","name":"Intelligent Rubber Hat"}},{"node":{"id":"1080","name":"Generic Frozen Hat"}}]}}},{"node":{"id":"6","name":"Carter - Bins","addressId":1794,"addresses":{"edges":[{"node":{"id":"1794","address1":"Roger Points"}}]},"products":{"edges":[{"node":{"id":"136","name":"Handcrafted Cotton Sausages"}}]}}},{"node":{"id":"7","name":"Langosh Group","addressId":1030,"addresses":{"edges":[{"node":{"id":"1030","address1":"Raynor Stravenue"}}]},"products":{"edges":[]}}},{"node":{"id":"8","name":"Blanda - O'Connell","addressId":576,"addresses":{"edges":[{"node":{"id":"576","address1":"Smitham Cliffs"}}]},"products":{"edges":[{"node":{"id":"652","name":"Ergonomic Rubber Sausages"}}]}}},{"node":{"id":"9","name":"Brekke, Wiegand and Moen","addressId":1618,"addresses":{"edges":[{"node":{"id":"1618","address1":"Nitzsche Shores"}}]},"products":{"edges":[{"node":{"id":"354","name":"Rustic Cotton Car"}},{"node":{"id":"933","name":"Fantastic Plastic Mouse"}},{"node":{"id":"1195","name":"Refined Cotton Bike"}}]}}},{"node":{"id":"10","name":"Koch LLC","addressId":251,"addresses":{"edges":[{"node":{"id":"251","address1":"Sophia Stravenue"}}]},"products":{"edges":[]}}}]}}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-22T10:52:02.596941045Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716375122
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Accept: */*' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'Host: localhost:9000' \
+      --header 'Postman-Token: 672b615e-2f3d-4d85-9b00-dcb32eef2161' \
+      --data '{"query":"query Stores {\n  stores (offset: 0, limit:10){\n    edges {\n      node {\n        id\n        name\n        addressId\n        addresses {\n          edges {\n            node {\n              id\n              address1\n            }\n          }\n        }\n        products {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}"}'

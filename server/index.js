@@ -23,10 +23,11 @@ import { sendMessage } from '@services/slack';
 import { SubscriptionRoot } from '@gql/subscriptions';
 import depthLimit from 'graphql-depth-limit';
 import logReqRes from './middleware/logger';
+const kMiddleware = require('@keploy/sdk/dist/v2/dedup/middleware.js');
 
 const totalCPUs = os.cpus().length;
 
-let app;
+let app, httpServer;
 export const fetchFromGithub = async query =>
   axios.get(`https://api.github.com/search/repositories?q=${query}&per_page=2`);
 const githubBreaker = newCircuitBreaker(fetchFromGithub, 'Github API is down');
@@ -51,6 +52,7 @@ export const init = async () => {
     app = express();
   }
 
+  app.use(kMiddleware());
   app.use(express.json());
   app.use(rTracer.expressMiddleware());
   app.use(cors(corsOptionsDelegate));
@@ -74,9 +76,8 @@ export const init = async () => {
     res.json({ data: message });
   });
 
-  /* istanbul ignore next */
   if (!isTestEnv()) {
-    const httpServer = createServer(app);
+    httpServer = createServer(app);
     const server = new ApolloServer({
       schema,
       introspection: isLocalEnv(),
@@ -104,6 +105,56 @@ export const init = async () => {
 };
 
 logger().info({ ENV: process.env.NODE_ENV });
+let shuttingDown = false;
+
+const gracefulShutdown = signal => {
+  console.log(`${signal} received, initiating shutdown...`);
+
+  shuttingDown = true; // Flag to prevent new workers from being forked
+
+  if (cluster.isMaster) {
+    const shutdownPromises = [];
+
+    for (const id in cluster.workers) {
+      const worker = cluster.workers[id];
+
+      // Setup listeners before sending the kill signal
+      const shutdownPromise = new Promise(resolve => {
+        worker.on('exit', () => {
+          console.log(`Worker ${worker.id} has shut down.`);
+          resolve();
+        });
+
+        worker.on('error', err => {
+          console.error(`Error shutting down worker ${worker.id}:`, err);
+          resolve(); // Resolve anyway to avoid hanging shutdown
+        });
+
+        worker.kill(signal); // Now send the shutdown signal
+      });
+
+      shutdownPromises.push(shutdownPromise);
+    }
+
+    Promise.all(shutdownPromises).then(() => {
+      console.log('All workers have been terminated, shutting down master.');
+      process.exit(0);
+    });
+
+    // Optional: set a timeout to force shutdown if workers take too long
+    setTimeout(() => {
+      console.log('Forcefully shutting down master after timeout.');
+      process.exit(1);
+    }, 10000); // Adjust timeout as needed
+  } else {
+    // Worker cleanup logic here, then exit
+    console.log(`Worker process ${process.pid} exiting.`);
+    process.exit(1);
+  }
+};
+
+process.on('SIGTERM', gracefulShutdown);
+process.on('SIGINT', gracefulShutdown);
 
 if (!isTestEnv() && !isLocalEnv() && cluster.isMaster) {
   console.log(`Number of CPUs is ${totalCPUs}`);
@@ -111,15 +162,18 @@ if (!isTestEnv() && !isLocalEnv() && cluster.isMaster) {
 
   // Fork workers.
   for (let i = 0; i < totalCPUs; i++) {
-    cluster.fork();
-  }
+    const worker = cluster.fork();
 
-  cluster.on('exit', (worker, code, signal) => {
-    console.log(`worker ${worker.process.pid} died`);
-    console.log("Let's fork another worker!");
-    cluster.fork();
-  });
+    worker.on('exit', (code, signal) => {
+      console.log(`Worker ${worker.process.pid} died with code ${code} and signal ${signal}`);
+      if (!shuttingDown) {
+        console.log("Let's fork another worker!");
+        cluster.fork();
+      }
+    });
+  }
 } else {
+  console.log('Worker process started, initializing...');
   init();
 }
 

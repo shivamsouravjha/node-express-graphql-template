@@ -1,0 +1,56 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-7
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I
+            Connection: keep-alive
+            Content-Length: "438"
+            Content-Type: application/json
+            Host: localhost:9000
+            Postman-Token: 34c9b2f4-51b3-4c3c-8abb-8095176a3c84
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query Suppliers {\n  suppliers (offset: 0, limit:10){\n    edges {\n      node {\n        id\n        name\n        addressId\n        addresses {\n          edges {\n            node {\n              id\n              address1\n            }\n          }\n        }\n        products {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}"}'
+        timestamp: 2024-05-22T10:51:37.89090713Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "2174"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 22 May 2024 10:51:38 GMT
+            Etag: W/"87e-kAaZwoVedVXoWNEY6+cz0KJ7UYU"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: |
+            {"data":{"suppliers":{"edges":[{"node":{"id":"1","name":"Kerluke, Beer and Balistreri","addressId":1092,"addresses":{"edges":[{"node":{"id":"1092","address1":"Tyler Trace"}}]},"products":{"edges":[]}}},{"node":{"id":"2","name":"Cassin - Aufderhar","addressId":1861,"addresses":{"edges":[{"node":{"id":"1861","address1":"Johnson Cove"}}]},"products":{"edges":[]}}},{"node":{"id":"3","name":"Conroy, Kunde and Beahan","addressId":1710,"addresses":{"edges":[{"node":{"id":"1710","address1":"Kunze Plains"}}]},"products":{"edges":[{"node":{"id":"766","name":"Refined Wooden Mouse"}}]}}},{"node":{"id":"4","name":"Kuvalis, Satterfield and Fisher","addressId":1196,"addresses":{"edges":[{"node":{"id":"1196","address1":"Damien Forges"}}]},"products":{"edges":[{"node":{"id":"857","name":"Awesome Fresh Table"}},{"node":{"id":"938","name":"Ergonomic Metal Mouse"}}]}}},{"node":{"id":"5","name":"Langosh, Schumm and Rogahn","addressId":1376,"addresses":{"edges":[{"node":{"id":"1376","address1":"Wilderman Trail"}}]},"products":{"edges":[{"node":{"id":"685","name":"Unbranded Concrete Soap"}},{"node":{"id":"1558","name":"Small Granite Mouse"}}]}}},{"node":{"id":"6","name":"Mosciski - Emmerich","addressId":863,"addresses":{"edges":[{"node":{"id":"863","address1":"Dandre Courts"}}]},"products":{"edges":[{"node":{"id":"1428","name":"Ergonomic Granite Shoes"}},{"node":{"id":"1559","name":"Sleek Fresh Shoes"}}]}}},{"node":{"id":"7","name":"Bernhard, Barton and Adams","addressId":1695,"addresses":{"edges":[{"node":{"id":"1695","address1":"Everardo Shoals"}}]},"products":{"edges":[{"node":{"id":"753","name":"Generic Wooden Hat"}}]}}},{"node":{"id":"8","name":"Yost - Konopelski","addressId":992,"addresses":{"edges":[{"node":{"id":"992","address1":"Amara Centers"}}]},"products":{"edges":[{"node":{"id":"1074","name":"Generic Plastic Gloves"}}]}}},{"node":{"id":"9","name":"Dibbert, Cole and Toy","addressId":465,"addresses":{"edges":[{"node":{"id":"465","address1":"Trantow Meadow"}}]},"products":{"edges":[]}}},{"node":{"id":"10","name":"Weissnat LLC","addressId":180,"addresses":{"edges":[{"node":{"id":"180","address1":"Collier Extensions"}}]},"products":{"edges":[]}}}]}}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-22T10:51:40.761428049Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716375100
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'Accept: */*' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'Host: localhost:9000' \
+      --header 'Postman-Token: 34c9b2f4-51b3-4c3c-8abb-8095176a3c84' \
+      --data '{"query":"query Suppliers {\n  suppliers (offset: 0, limit:10){\n    edges {\n      node {\n        id\n        name\n        addressId\n        addresses {\n          edges {\n            node {\n              id\n              address1\n            }\n          }\n        }\n        products {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}"}'

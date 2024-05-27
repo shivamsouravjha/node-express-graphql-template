@@ -1,0 +1,56 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-4
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I
+            Connection: keep-alive
+            Content-Length: "428"
+            Content-Type: application/json
+            Host: localhost:9000
+            Postman-Token: bdcd90f5-185e-4afa-a1d1-766630e53111
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query StoreProducts {\n  storeProducts(offset: 0, limit: 5) {\n    edges {\n      node {\n        id\n        stores (first: 1){\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n        products(first: 1) {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'
+        timestamp: 2024-05-22T10:50:36.713527311Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "849"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 22 May 2024 10:50:37 GMT
+            Etag: W/"351-xmPt5IOAfxt8LbRwVCNEhlPkNTc"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: |
+            {"data":{"storeProducts":{"edges":[{"node":{"id":"1","stores":{"edges":[{"node":{"id":"1528","name":"McLaughlin Inc"}}]},"products":{"edges":[{"node":{"id":"1","name":"Refined Fresh Gloves"}}]}}},{"node":{"id":"2","stores":{"edges":[{"node":{"id":"1405","name":"Fadel, Dicki and Stamm"}}]},"products":{"edges":[{"node":{"id":"2","name":"Intelligent Metal Soap"}}]}}},{"node":{"id":"3","stores":{"edges":[{"node":{"id":"1015","name":"Crona Group"}}]},"products":{"edges":[{"node":{"id":"3","name":"Intelligent Wooden Hat"}}]}}},{"node":{"id":"4","stores":{"edges":[{"node":{"id":"801","name":"Erdman LLC"}}]},"products":{"edges":[{"node":{"id":"4","name":"Gorgeous Concrete Soap"}}]}}},{"node":{"id":"5","stores":{"edges":[{"node":{"id":"1620","name":"Boehm and Sons"}}]},"products":{"edges":[{"node":{"id":"5","name":"Gorgeous Wooden Car"}}]}}}]}}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-22T10:50:39.49589484Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716375039
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'Postman-Token: bdcd90f5-185e-4afa-a1d1-766630e53111' \
+      --header 'Accept: */*' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJNYXppZSIsImxhc3ROYW1lIjoiU3dpZnQiLCJlbWFpbCI6Ik1hZGVseW5uLlpib25jYWs3M0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImRhYTkzMjBmNWM1ODQ0Yjg0YjI4ZTAxNmI0YjhjNDBiIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0wOFQwOTo1Njo0MC44MDNaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJpYXQiOjE3MTYzNzQ5NzgsImV4cCI6MTcxNjQ2MTM3OH0.isPtveOxoluN0J6IJ6GZS5ZkgYyG_AnjNRpCDrgyZ9I' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Content-Type: application/json' \
+      --header 'Host: localhost:9000' \
+      --header 'Connection: keep-alive' \
+      --data '{"query":"query StoreProducts {\n  storeProducts(offset: 0, limit: 5) {\n    edges {\n      node {\n        id\n        stores (first: 1){\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n        products(first: 1) {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'

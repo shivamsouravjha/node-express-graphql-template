@@ -7,22 +7,38 @@ services:
     restart: always
     env_file:
       - .env.docker
+    networks:
+      - keploy-network
+
   redis:
     image: 'redis:alpine'
     ports:
       - '6379:6379'
     command: ['redis-server', '--bind', 'redis', '--port', '6379']
+    networks:
+      - keploy-network
+
   app:
     build:
       context: .
       args:
         ENVIRONMENT_NAME: .docker
         BUILD_NAME: docker
-    restart: always
+        APP_PATH: ${APP_PATH}
     depends_on:
       - db_postgres
       - redis
     ports:
       - 9000:9000
     env_file:
-      - ./.env.docker
+      - .env.docker
+    networks:
+      - keploy-network
+    volumes:
+      - /Users/apple/repos/node-express-graphql-template/dedupData.yaml:${APP_PATH}/dedupData.yaml
+    stop_grace_period: 50s  # Increase the stop grace period to 50 seconds
+
+
+networks:
+  keploy-network:
+    external: true

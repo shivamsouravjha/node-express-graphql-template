@@ -1,0 +1,58 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-4
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJHcmVnb3JpYSIsImxhc3ROYW1lIjoiRmVycnkiLCJlbWFpbCI6IkxlbXBpLkZheTdAeWFob28uY29tIiwicGFzc3dvcmQiOiJkYWE5MzIwZjVjNTg0NGI4NGIyOGUwMTZiNGI4YzQwYiIsImNyZWF0ZWRBdCI6IjIwMjItMDctMjVUMTg6MTA6NTQuNjE3WiIsInVwZGF0ZWRBdCI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2ODE0MTYyLCJleHAiOjE3MTY5MDA1NjJ9.ZAsq9LK6LNqki88-6sPZG6MGtA5ftECpzSvzsacqFEw
+            Connection: keep-alive
+            Content-Length: "542"
+            Content-Type: application/json
+            Host: localhost:9000
+            Postman-Token: 37623e31-20c2-464b-9ad2-15cb43965409
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query PurchasedProducts {\n  purchasedProducts(offset: 0, limit: 5) {\n    pageInfo {\n      hasNextPage\n      endCursor\n    }\n    edges {\n      node {\n        id   \n        discount\n        price\n        createdAt\n        products(first: 5) {\n          pageInfo {\n            hasPreviousPage\n          }\n          edges {\n            node {\n              category\n              id \n              name\n              amount\n              createdAt\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'
+        timestamp: 2024-05-27T12:50:18.542938468Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "1479"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 27 May 2024 12:50:19 GMT
+            Etag: W/"5c7-j2KB1U2vOmP9+QeQVVSw4bOKR2Q"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: |
+            {"data":{"purchasedProducts":{"pageInfo":{"hasNextPage":false,"endCursor":"WzUsNF0="},"edges":[{"node":{"id":"1","discount":842,"price":37300,"createdAt":"1994-10-24T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Electronics","id":"208","name":"Tasty Granite Tuna","amount":2700,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"2","discount":906,"price":78200,"createdAt":"1994-10-25T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Jewelery","id":"1097","name":"Fantastic Metal Tuna","amount":51100,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"3","discount":492,"price":48500,"createdAt":"1994-10-26T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Beauty","id":"293","name":"Small Granite Pants","amount":64700,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"4","discount":2485,"price":98300,"createdAt":"1994-10-27T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Clothing","id":"1740","name":"Practical Plastic Computer","amount":34700,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"5","discount":4584,"price":81700,"createdAt":"1994-10-28T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Beauty","id":"866","name":"Small Steel Hat","amount":40600,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}}]}}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-27T12:50:21.473407221Z
+    objects: []
+    assertions:
+        noise:
+            body.data.purchasedProducts.edges.node.createdAt: []
+            body.data.purchasedProducts.edges.node.products.edges.node.createdAt: []
+            header.Date: []
+    created: 1716814221
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'Content-Type: application/json' \
+      --header 'Host: localhost:9000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Accept: */*' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJHcmVnb3JpYSIsImxhc3ROYW1lIjoiRmVycnkiLCJlbWFpbCI6IkxlbXBpLkZheTdAeWFob28uY29tIiwicGFzc3dvcmQiOiJkYWE5MzIwZjVjNTg0NGI4NGIyOGUwMTZiNGI4YzQwYiIsImNyZWF0ZWRBdCI6IjIwMjItMDctMjVUMTg6MTA6NTQuNjE3WiIsInVwZGF0ZWRBdCI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2ODE0MTYyLCJleHAiOjE3MTY5MDA1NjJ9.ZAsq9LK6LNqki88-6sPZG6MGtA5ftECpzSvzsacqFEw' \
+      --header 'Postman-Token: 37623e31-20c2-464b-9ad2-15cb43965409' \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --data '{"query":"query PurchasedProducts {\n  purchasedProducts(offset: 0, limit: 5) {\n    pageInfo {\n      hasNextPage\n      endCursor\n    }\n    edges {\n      node {\n        id   \n        discount\n        price\n        createdAt\n        products(first: 5) {\n          pageInfo {\n            hasPreviousPage\n          }\n          edges {\n            node {\n              category\n              id \n              name\n              amount\n              createdAt\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'
