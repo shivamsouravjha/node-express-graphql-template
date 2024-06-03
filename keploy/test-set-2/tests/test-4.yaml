@@ -1,0 +1,58 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-4
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJHcmVnb3JpYSIsImxhc3ROYW1lIjoiRmVycnkiLCJlbWFpbCI6IkxlbXBpLkZheTdAeWFob28uY29tIiwicGFzc3dvcmQiOiJkYWE5MzIwZjVjNTg0NGI4NGIyOGUwMTZiNGI4YzQwYiIsImNyZWF0ZWRBdCI6IjIwMjItMDctMjVUMTg6MTA6NTQuNjE3WiIsInVwZGF0ZWRBdCI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2ODc0NjE5LCJleHAiOjE3MTY5NjEwMTl9.a302WsOtJr-l6BuYJfAJKbyKI3iicAdcBIxrBohkI3c
+            Connection: keep-alive
+            Content-Length: "543"
+            Content-Type: application/json
+            Host: localhost:9000
+            Postman-Token: 7d5a432c-d93f-4736-843d-ef9659b82355
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query PurchasedProducts {\n  purchasedProducts(offset: 0, limit: 10) {\n    pageInfo {\n      hasNextPage\n      endCursor\n    }\n    edges {\n      node {\n        id   \n        discount\n        price\n        createdAt\n        products(first: 5) {\n          pageInfo {\n            hasPreviousPage\n          }\n          edges {\n            node {\n              category\n              id \n              name\n              amount\n              createdAt\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'
+        timestamp: 2024-05-28T05:38:05.766873132Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "2871"
+            Content-Type: application/json; charset=utf-8
+            Date: Tue, 28 May 2024 05:38:06 GMT
+            Etag: W/"b37-0YxyMkjopvat0cEVCb5LReiJu+s"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: |
+            {"data":{"purchasedProducts":{"pageInfo":{"hasNextPage":false,"endCursor":"WzEwLDld"},"edges":[{"node":{"id":"1","discount":842,"price":37300,"createdAt":"1994-10-24T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Electronics","id":"208","name":"Tasty Granite Tuna","amount":2700,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"2","discount":906,"price":78200,"createdAt":"1994-10-25T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Jewelery","id":"1097","name":"Fantastic Metal Tuna","amount":51100,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"3","discount":492,"price":48500,"createdAt":"1994-10-26T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Beauty","id":"293","name":"Small Granite Pants","amount":64700,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"4","discount":2485,"price":98300,"createdAt":"1994-10-27T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Clothing","id":"1740","name":"Practical Plastic Computer","amount":34700,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"5","discount":4584,"price":81700,"createdAt":"1994-10-28T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Beauty","id":"866","name":"Small Steel Hat","amount":40600,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"6","discount":758,"price":56400,"createdAt":"1994-10-29T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Industrial","id":"1553","name":"Sleek Frozen Pants","amount":14700,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"7","discount":1197,"price":33200,"createdAt":"1994-10-30T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Kids","id":"1955","name":"Awesome Fresh Hat","amount":21500,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"8","discount":1431,"price":99000,"createdAt":"1994-10-31T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Computers","id":"1313","name":"Ergonomic Rubber Sausages","amount":4000,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"9","discount":620,"price":60100,"createdAt":"1994-11-01T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Electronics","id":"1126","name":"Gorgeous Concrete Hat","amount":24200,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}},{"node":{"id":"10","discount":447,"price":24500,"createdAt":"1994-11-02T06:38:06.236Z","products":{"pageInfo":{"hasPreviousPage":false},"edges":[{"node":{"category":"Electronics","id":"340","name":"Small Concrete Chips","amount":48600,"createdAt":"2024-05-24T09:14:26.513Z"}}]}}}]}}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-28T05:38:08.587493092Z
+    objects: []
+    assertions:
+        noise:
+            body.data.purchasedProducts.edges.node.createdAt: []
+            body.data.purchasedProducts.edges.node.products.edges.node.createdAt: []
+            header.Date: []
+    created: 1716874688
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 7d5a432c-d93f-4736-843d-ef9659b82355' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Host: localhost:9000' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJHcmVnb3JpYSIsImxhc3ROYW1lIjoiRmVycnkiLCJlbWFpbCI6IkxlbXBpLkZheTdAeWFob28uY29tIiwicGFzc3dvcmQiOiJkYWE5MzIwZjVjNTg0NGI4NGIyOGUwMTZiNGI4YzQwYiIsImNyZWF0ZWRBdCI6IjIwMjItMDctMjVUMTg6MTA6NTQuNjE3WiIsInVwZGF0ZWRBdCI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2ODc0NjE5LCJleHAiOjE3MTY5NjEwMTl9.a302WsOtJr-l6BuYJfAJKbyKI3iicAdcBIxrBohkI3c' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --data '{"query":"query PurchasedProducts {\n  purchasedProducts(offset: 0, limit: 10) {\n    pageInfo {\n      hasNextPage\n      endCursor\n    }\n    edges {\n      node {\n        id   \n        discount\n        price\n        createdAt\n        products(first: 5) {\n          pageInfo {\n            hasPreviousPage\n          }\n          edges {\n            node {\n              category\n              id \n              name\n              amount\n              createdAt\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'

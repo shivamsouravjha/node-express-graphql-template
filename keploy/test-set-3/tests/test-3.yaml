@@ -1,0 +1,56 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-3
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:9000/graphql
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJHcmVnb3JpYSIsImxhc3ROYW1lIjoiRmVycnkiLCJlbWFpbCI6IkxlbXBpLkZheTdAeWFob28uY29tIiwicGFzc3dvcmQiOiJkYWE5MzIwZjVjNTg0NGI4NGIyOGUwMTZiNGI4YzQwYiIsImNyZWF0ZWRBdCI6IjIwMjItMDctMjVUMTg6MTA6NTQuNjE3WiIsInVwZGF0ZWRBdCI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2ODc1NjE1LCJleHAiOjE3MTY5NjIwMTV9.p5v3wI8Yu3vOYiJ5wodedaDsUTuR7MuKc7dSHh3epO4
+            Connection: keep-alive
+            Content-Length: "429"
+            Content-Type: application/json
+            Host: localhost:9000
+            Postman-Token: 587c5c4f-d613-4dda-b2e0-76a2a7d9e0ee
+            User-Agent: PostmanRuntime/7.37.3
+        body: '{"query":"query StoreProducts {\n  storeProducts(offset: 0, limit: 10) {\n    edges {\n      node {\n        id\n        stores (first: 1){\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n        products(first: 1) {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'
+        timestamp: 2024-05-28T05:54:43.331636135Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Connection: keep-alive
+            Content-Length: "1730"
+            Content-Type: application/json; charset=utf-8
+            Date: Tue, 28 May 2024 05:54:44 GMT
+            Etag: W/"6c2-PvAguoZowPPJ3x7bc/Ea37itzao"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: |
+            {"data":{"storeProducts":{"edges":[{"node":{"id":"1","stores":{"edges":[{"node":{"id":"1469","name":"Turner - Lang"}}]},"products":{"edges":[{"node":{"id":"1","name":"Gorgeous Steel Hat"}}]}}},{"node":{"id":"2","stores":{"edges":[{"node":{"id":"661","name":"Kassulke - Morissette"}}]},"products":{"edges":[{"node":{"id":"2","name":"Sleek Plastic Tuna"}}]}}},{"node":{"id":"3","stores":{"edges":[{"node":{"id":"1667","name":"Green - Wehner"}}]},"products":{"edges":[{"node":{"id":"3","name":"Handmade Concrete Salad"}}]}}},{"node":{"id":"4","stores":{"edges":[{"node":{"id":"1229","name":"Gerlach, Wuckert and Murphy"}}]},"products":{"edges":[{"node":{"id":"4","name":"Practical Steel Towels"}}]}}},{"node":{"id":"5","stores":{"edges":[{"node":{"id":"952","name":"Weimann - Braun"}}]},"products":{"edges":[{"node":{"id":"5","name":"Tasty Metal Shoes"}}]}}},{"node":{"id":"6","stores":{"edges":[{"node":{"id":"826","name":"Deckow, Boyle and Cummings"}}]},"products":{"edges":[{"node":{"id":"6","name":"Unbranded Wooden Soap"}}]}}},{"node":{"id":"7","stores":{"edges":[{"node":{"id":"1336","name":"Pfannerstill, Bruen and Lowe"}}]},"products":{"edges":[{"node":{"id":"7","name":"Sleek Plastic Hat"}}]}}},{"node":{"id":"8","stores":{"edges":[{"node":{"id":"283","name":"Mante, Greenfelder and Sanford"}}]},"products":{"edges":[{"node":{"id":"8","name":"Fantastic Steel Soap"}}]}}},{"node":{"id":"9","stores":{"edges":[{"node":{"id":"1211","name":"Cartwright - Reilly"}}]},"products":{"edges":[{"node":{"id":"9","name":"Handcrafted Granite Cheese"}}]}}},{"node":{"id":"10","stores":{"edges":[{"node":{"id":"1984","name":"Crist, Leannon and Collins"}}]},"products":{"edges":[{"node":{"id":"10","name":"Practical Plastic Tuna"}}]}}}]}}}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-05-28T05:54:46.276166471Z
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1716875686
+curl: |-
+    curl --request POST \
+      --url http://localhost:9000/graphql \
+      --header 'Accept: */*' \
+      --header 'Host: localhost:9000' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'Postman-Token: 587c5c4f-d613-4dda-b2e0-76a2a7d9e0ee' \
+      --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJHcmVnb3JpYSIsImxhc3ROYW1lIjoiRmVycnkiLCJlbWFpbCI6IkxlbXBpLkZheTdAeWFob28uY29tIiwicGFzc3dvcmQiOiJkYWE5MzIwZjVjNTg0NGI4NGIyOGUwMTZiNGI4YzQwYiIsImNyZWF0ZWRBdCI6IjIwMjItMDctMjVUMTg6MTA6NTQuNjE3WiIsInVwZGF0ZWRBdCI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwiaWF0IjoxNzE2ODc1NjE1LCJleHAiOjE3MTY5NjIwMTV9.p5v3wI8Yu3vOYiJ5wodedaDsUTuR7MuKc7dSHh3epO4' \
+      --data '{"query":"query StoreProducts {\n  storeProducts(offset: 0, limit: 10) {\n    edges {\n      node {\n        id\n        stores (first: 1){\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n        products(first: 1) {\n          edges {\n            node {\n              id\n              name\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'
