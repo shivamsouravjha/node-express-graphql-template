@@ -23,7 +23,7 @@ services:
     build:
       context: .
       args:
-        ENVIRONMENT_NAME: .docker
+        ENVIRONMENT_NAME: .local
         BUILD_NAME: docker
         APP_PATH: ${APP_PATH}
     # depends_on:
@@ -32,11 +32,9 @@ services:
     ports:
       - 9000:9000
     env_file:
-      - .env.docker
+      - .env.local
     networks:
       - keploy-network
-    volumes:
-      - /Users/apple/repos/node-express-graphql-template/dedupData.yaml:${APP_PATH}/dedupData.yaml
     stop_grace_period: 50s  # Increase the stop grace period to 50 seconds
 
 

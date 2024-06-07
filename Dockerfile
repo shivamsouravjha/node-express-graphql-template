@@ -24,9 +24,9 @@ ADD scripts/migrate-and-run.sh ${APP_PATH}/
 ADD package.json ${APP_PATH}/
 ADD . ${APP_PATH}/
 COPY --from=0 ${APP_PATH}/dist ${APP_PATH}/dist
-ADD https://keploy-enterprise.s3.us-west-2.amazonaws.com/releases/latest/assets/freeze_time_arm64.so /lib/keploy/freeze_time_arm64.so
-RUN chmod +x /lib/keploy/freeze_time_arm64.so
-ENV LD_PRELOAD=/lib/keploy/freeze_time_arm64.so
+ADD https://keploy-enterprise.s3.us-west-2.amazonaws.com/releases/latest/assets/freeze_time_amd64.so /lib/keploy/freeze_time_amd64.so
+RUN chmod +x /lib/keploy/freeze_time_amd64.so
+ENV LD_PRELOAD=/lib/keploy/freeze_time_amd64.so
 
 
 # Set working directory
