@@ -9,7 +9,7 @@ export ENVIRONMENT_NAME=local
 echo "Project built successfully"
 
 # Start keploy in test mode
-sudo -E env PATH="$PATH" keployE test -c "sudo docker compose --env-file .env.local up" --containerName "custom_app" --delay 250 --apiTimeout 300 --generateGithubActions=false --coverage=false
+sudo -E env PATH="$PATH" keployE test -c "sudo docker compose --env-file .env.local up" --containerName "custom_app" --delay 250 --buildDelay 150 --apiTimeout 300 --generateGithubActions=false --coverage=false
 echo "Keploy started in test mode"
 
 # Initialize a flag to track the overall test status
