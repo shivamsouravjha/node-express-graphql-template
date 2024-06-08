@@ -2,7 +2,7 @@ curl --silent -O -L https://keploy.io/ent/install.sh
 
 export DOCKER_BUILDKIT=1
 
-# sudo -E docker compose build
+sudo -E docker compose build
 export KEPLOY_API_KEY=Iba1IAlh+GKnXPzYeA==
 # curl --silent -o keployE --location "https://keploy-enterprise.s3.us-west-2.amazonaws.com/releases/latest/enterprise_linux_amd64"
 # sudo chmod a+x keployE && sudo mkdir -p /usr/local/bin && sudo mv keployE /usr/local/bin
