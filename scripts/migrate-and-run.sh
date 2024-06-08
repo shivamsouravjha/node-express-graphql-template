@@ -21,20 +21,20 @@ trap 'handle_int' INT TERM
 
 sleep 10  # Ensure services like DB are up
 
-echo $BUILD_NAME
-if [ "$BUILD_NAME" == "local" ]; then
-    npx sequelize-cli db:drop
-    npx sequelize-cli db:create
-fi
+# echo $BUILD_NAME
+# if [ "$BUILD_NAME" == "local" ]; then
+#     npx sequelize-cli db:drop
+#     npx sequelize-cli db:create
+# fi
 
-npx sequelize-cli db:migrate
+# npx sequelize-cli db:migrate
 
-# Seed data for local builds
-if [ "$BUILD_NAME" = "local" ]; then
-    for file in seeders/*; do
-        npx sequelize-cli db:seed --seed $file
-    done
-fi
+# # Seed data for local builds
+# if [ "$BUILD_NAME" = "local" ]; then
+#     for file in seeders/*; do
+#         npx sequelize-cli db:seed --seed $file
+#     done
+# fi
 
 # Start yarn and get its PID
 yarn start &
