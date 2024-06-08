@@ -4,13 +4,13 @@ export DOCKER_BUILDKIT=1
 
 # sudo -E docker compose build
 export KEPLOY_API_KEY=Iba1IAlh+GKnXPzYeA==
-# curl --silent -o keployE --location "https://keploy-enterprise.s3.us-west-2.amazonaws.com/releases/latest/enterprise_linux_amd64"
-# sudo chmod a+x keployE && sudo mkdir -p /usr/local/bin && sudo mv keployE /usr/local/bin
+curl --silent -o keployE --location "https://keploy-enterprise.s3.us-west-2.amazonaws.com/releases/latest/enterprise_linux_amd64"
+sudo chmod a+x keployE && sudo mkdir -p /usr/local/bin && sudo mv keployE /usr/local/bin
 
 
-curl --silent --location "https://github.com/keploy/keploy/releases/latest/download/keploy_linux_amd64.tar.gz" | tar xz -C /tmp
+# curl --silent --location "https://github.com/keploy/keploy/releases/latest/download/keploy_linux_amd64.tar.gz" | tar xz -C /tmp
 
-sudo mkdir -p /usr/local/bin && sudo mv /tmp/keploy /usr/local/bin/keploybin
+# sudo mkdir -p /usr/local/bin && sudo mv /tmp/keploy /usr/local/bin/keploybin
 # Clone the specific branch from the Keploy repository
 # git clone --branch shivam/check https://github.com/keploy/keploy.git /tmp/keploy_repo
 # cd /tmp/keploy_repo
@@ -35,7 +35,7 @@ export ENVIRONMENT_NAME=local
 echo "Project built successfully"
 
 # Start keploy in test mode
-sudo -E env PATH="$PATH" /usr/local/bin/keploybin test -c "sudo docker compose --env-file .env.local up" --containerName "custom_app" --delay 250 --buildDelay 150 --apiTimeout 300 --generateGithubActions=false --coverage=false
+sudo -E env PATH="$PATH" /usr/local/bin/keployE test -c "sudo docker compose --env-file .env.local up" --containerName "custom_app" --delay 250 --buildDelay 150 --apiTimeout 300 --generateGithubActions=false --coverage=false
 echo "Keploy started in test mode"
 
 # Initialize a flag to track the overall test status
