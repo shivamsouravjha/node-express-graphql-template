@@ -32,7 +32,7 @@ test:
   language: ''
   removeUnusedMocks: false
   dedup: false
-  freezeTime: true
+  freezeTime: false
 record:
   recordTimer: 0s
   filters: []
