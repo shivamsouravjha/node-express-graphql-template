@@ -1,34 +1,12 @@
 version: '3'
 services:
-  db_postgres:
-    image: postgres
-    ports:
-      - 5432:5432
-    restart: always
-    env_file:
-      - .env.docker
-    networks:
-      - keploy-network
-
-  redis:
-    image: 'redis:alpine'
-    ports:
-      - '6379:6379'
-    command: ['redis-server', '--bind', 'redis', '--port', '6379']
-    networks:
-      - keploy-network
-
   app:
     container_name: custom_app
     build:
       context: .
       args:
-        ENVIRONMENT_NAME: .docker
-        BUILD_NAME: docker
+        BUILD_NAME: keploy
         APP_PATH: ${APP_PATH}
-    depends_on:
-      - db_postgres
-      - redis
     ports:
       - 9000:9000
     env_file:
