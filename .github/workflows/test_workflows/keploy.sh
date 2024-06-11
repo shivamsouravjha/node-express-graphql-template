@@ -7,27 +7,6 @@ curl --silent -o keployE --location "https://keploy-enterprise.s3.us-west-2.amaz
 sudo chmod a+x keployE && sudo mkdir -p /usr/local/bin && sudo mv keployE /usr/local/bin
 
 
-# curl --silent --location "https://github.com/keploy/keploy/releases/latest/download/keploy_linux_amd64.tar.gz" | tar xz -C /tmp
-
-# sudo mkdir -p /usr/local/bin && sudo mv /tmp/keploy /usr/local/bin/keploybin
-# git clone --branch fix-racePg https://github.com/keploy/keploy.git /tmp/keploy_repo
-# cd /tmp/keploy_repo
-
-# # # # Build the binary
-# go build -race -tags=viper_bind_struct -o keploybin .
-# # # # Move the binary to /usr/local/bin
-# sudo mkdir -p /usr/local/bin && sudo mv keploybin /usr/local/bin/keploybin
-
-# sudo docker build -t ghcr.io/keploy/keploy:v2-dev .
-
-# cd -
-
-
-
-# Install the required node dependencies
-# yarn install
-
-export ENVIRONMENT_NAME=local
 # Build the project locally
 echo "Project built successfully"
 
