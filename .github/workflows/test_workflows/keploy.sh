@@ -43,8 +43,9 @@ if [ "$all_passed" = true ]; then
     docker cp custom_app:$(pwd)/.nyc_output $(pwd)/.nyc_output
     echo "Files at the current layer after copying .nyc_output:"
     ls -a
-    npx nyc report --reporter=html --reporter=text --temp-dir=./.nyc_output --report-dir=./coverage/summary
+    npx nyc report
     ls -a
+    ls -l ./coverage
 
     echo "All tests passed"
 

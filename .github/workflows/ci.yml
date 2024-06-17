@@ -59,4 +59,4 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           verbose: true
-          files: coverage  # Adjust this to match your actual coverage file name
+          files: ./reports/test-report.xml
