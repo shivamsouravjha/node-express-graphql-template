@@ -44,6 +44,7 @@ if [ "$all_passed" = true ]; then
     echo "Files at the current layer after copying .nyc_output:"
     ls -a
     npx nyc report --reporter=html --reporter=text --temp-dir=./.nyc_output --report-dir=./coverage/summary
+    ls -a
 
     echo "All tests passed"
 
