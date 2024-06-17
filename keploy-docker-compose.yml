@@ -6,7 +6,7 @@ services:
       context: .
       args:
         BUILD_NAME: keploy
-        APP_PATH: ${APP_PATH}
+        APP_PATH: /home/runner/work/node-express-graphql-template/node-express-graphql-template
     ports:
       - 9000:9000
     env_file:

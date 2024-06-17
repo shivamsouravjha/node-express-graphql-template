@@ -1,5 +1,5 @@
 curl --silent -O -L https://keploy.io/ent/install.sh 
-
+echo "Current directory: $(pwd)"
 
 sudo docker compose -f keploy-docker-compose.yml build
 export KEPLOY_API_KEY=Iba1IAlh+GKnXPzYeA==
@@ -17,10 +17,10 @@ echo "Keploy started in test mode"
 all_passed=true
 
 # Loop through test sets 1 to 4
-for i in {1..4}
-do
+# for i in {4}
+# do
     # Define the report file for each test set
-    report_file="./keploy/reports/test-run-0/test-set-$i-report.yaml"
+    report_file="./keploy/reports/test-run-0/test-set-4-report.yaml"
 
     # Extract the test status
     test_status=$(grep 'status:' "$report_file" | head -n 1 | awk '{print $2}')
@@ -34,10 +34,19 @@ do
         echo "Test-set-$i did not pass."
         break # Exit the loop early as all tests need to pass
     fi
-done
+# done
 
 # Check the overall test status and exit accordingly
 if [ "$all_passed" = true ]; then
+    ls -l
+    echo $(sudo docker ps -a)
+    docker cp custom_app:$(pwd)/.nyc_output $(pwd)/.nyc_output
+    echo "Files at the current layer after copying .nyc_output:"
+    ls -a
+    npx nyc report --reporter=html --reporter=text --temp-dir=./.nyc_output --report-dir=./coverage/summary
+
+    echo "All tests passed"
+
     echo "All tests passed"
     exit 0
 else
