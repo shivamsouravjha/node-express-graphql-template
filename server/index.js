@@ -1,10 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import { SubscriptionServer } from 'subscriptions-transport-ws/dist/server';
+import { ApolloServer } from '@apollo/server';
+import { expressMiddleware } from '@apollo/server/express4';
+import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
 import { GraphQLSchema, execute, subscribe } from 'graphql';
 import 'whatwg-fetch';
 import dotenv from 'dotenv';
-import { ApolloServer } from 'apollo-server-express';
 import { createServer } from 'http';
 import axios from 'axios';
 import { newCircuitBreaker } from '@services/circuitbreaker';
@@ -85,10 +87,11 @@ export const init = async () => {
       formatError: e => {
         logger().info({ e });
         return e.message;
-      }
+      },
+      plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
     });
     await server.start();
-    server.applyMiddleware({ app });
+    app.use('/graphql', cors(), express.json(), expressMiddleware(server));
     const subscriptionServer = SubscriptionServer.create(
       { schema, execute, subscribe },
       { server: httpServer, path: server.graphqlPath }

@@ -15,6 +15,7 @@
   "homepage": "https://github.com/wednesday-solutions/reporting-dashboard#readme",
   "scripts": {
     "start:local": "nodemon",
+    "start:docker": "yarn build:docker && yarn start",
     "local": "kill-port 9000 && export ENVIRONMENT_NAME=local && yarn build:local && yarn start",
     "build:local": "export ENVIRONMENT_NAME=local NODE_OPTIONS=--openssl-legacy-provider && rm -rf dist && webpack --mode development --config  webpack.dev.config.js",
     "build:dev": "export ENVIRONMENT_NAME=development NODE_OPTIONS=--openssl-legacy-provider && rm -rf dist && webpack --mode development --config  webpack.dev.config.js",
@@ -37,6 +38,7 @@
     "preinstall": "command -v link-module-alias && link-module-alias clean || true"
   },
   "dependencies": {
+    "@apollo/server": "^4.10.4",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
@@ -44,7 +46,6 @@
     "@babel/plugin-syntax-optional-chaining": "^7.8.3",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-flow": "^7.12.1",
-    "apollo-server-express": "^3.13.0",
     "aws-sdk": "^2.949.0",
     "axios": "^0.26.0",
     "babel-eslint": "^10.1.0",
@@ -56,9 +57,9 @@
     "deep-map-keys": "^2.0.1",
     "dotenv": "^10.0.0",
     "eslint-loader": "^4.0.2",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "fs": "^0.0.1-security",
-    "graphql": "^16.9.0",
+    "graphql": "16.6.0",
     "graphql-depth-limit": "^1.1.0",
     "graphql-iso-date": "^3.6.1",
     "graphql-redis-subscriptions": "^2.4.2",

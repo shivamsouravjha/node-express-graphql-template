@@ -5,7 +5,7 @@ import { QueryRoot } from '@gql/queries';
 import { MutationRoot } from '@gql/mutations';
 import { client } from '@database';
 import { SubscriptionRoot } from '@gql/subscriptions';
-import { ApolloServer } from 'apollo-server-express';
+import { ApolloServer } from '@apollo/server';
 import { logger } from '..';
 
 const connect = async () => {
