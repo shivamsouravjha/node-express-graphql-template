@@ -1,4 +1,5 @@
 import express from 'express';
+import { expressMiddleware } from '@apollo/server/express4';
 import { GraphQLSchema } from 'graphql';
 import dotenv from 'dotenv';
 import { QueryRoot } from '@gql/queries';
@@ -31,7 +32,7 @@ const getTestApp = async () => {
   });
   await server.start();
 
-  server.applyMiddleware({ app: testApp });
+  testApp.use('/graphql', express.json(), expressMiddleware(server));
   testApp.use('/', (_, response) => {
     response
       .status(200)

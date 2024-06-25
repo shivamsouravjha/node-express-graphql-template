@@ -91,10 +91,13 @@ export const init = async () => {
       plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
     });
     await server.start();
-    app.use('/graphql', cors(), express.json(), expressMiddleware(server));
+
+    const graphqlPath = '/graphql';
+    app.use(graphqlPath, express.json(), expressMiddleware(server));
+
     const subscriptionServer = SubscriptionServer.create(
       { schema, execute, subscribe },
-      { server: httpServer, path: server.graphqlPath }
+      { server: httpServer, path: graphqlPath }
     );
     ['SIGINT', 'SIGTERM'].forEach(signal => {
       process.on(signal, () => subscriptionServer.close());
