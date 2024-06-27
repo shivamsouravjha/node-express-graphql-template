@@ -18,11 +18,19 @@ services:
       args:
         ENVIRONMENT_NAME: .docker
         BUILD_NAME: docker
+        APP_PATH: /Users/apple/repos/template/node-express-graphql-template
     restart: always
     depends_on:
       - db_postgres
       - redis
     ports:
       - 9000:9000
+    environment:
+      ENABLE_DEDUP: "false"
     env_file:
       - ./.env.docker
+    volumes:
+      - type: bind
+        source: ./dedupData.yaml
+        target: ${APP_PATH}/dedupData.yaml
+    stop_grace_period: 50s

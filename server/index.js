@@ -54,6 +54,10 @@ export const init = async () => {
     app = express();
   }
 
+  if (process.env.ENABLE_DEDUP) {
+    const kMiddleware = require('@keploy/sdk/dist/v2/dedup/middleware.js');
+    app.use(kMiddleware());
+  }
   app.use(express.json());
   app.use(rTracer.expressMiddleware());
   app.use(cors(corsOptionsDelegate));
