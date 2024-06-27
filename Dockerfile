@@ -2,6 +2,7 @@ FROM node:18
 ARG ENVIRONMENT_NAME
 ARG BUILD_NAME
 ARG APP_PATH
+ARG PLATFORM
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # RUN mkdir -p /app-build
@@ -19,6 +20,7 @@ FROM node:18-alpine
 ARG ENVIRONMENT_NAME
 ARG BUILD_NAME
 ARG APP_PATH
+ARG PLATFORM
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
 WORKDIR ${APP_PATH}
@@ -30,9 +32,9 @@ ADD scripts/migrate-and-run.sh ${APP_PATH}/
 ADD package.json ${APP_PATH}/
 ADD . ./
 COPY --from=0 ${APP_PATH}/dist ${APP_PATH}/dist
-ADD https://keploy-enterprise.s3.us-west-2.amazonaws.com/releases/latest/assets/freeze_time_arm64.so /lib/keploy/freeze_time_arm64.so
-RUN chmod +x /lib/keploy/freeze_time_arm64.so
-ENV LD_PRELOAD=/lib/keploy/freeze_time_arm64.so
+ADD https://keploy-enterprise.s3.us-west-2.amazonaws.com/releases/latest/assets/freeze_time_$PLATFORM.so /lib/keploy/freeze_time_$PLATFORM.so
+RUN chmod +x /lib/keploy/freeze_time_$PLATFORM.so
+ENV LD_PRELOAD=/lib/keploy/freeze_time_$PLATFORM.so
 
 STOPSIGNAL SIGINT
 
