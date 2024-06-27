@@ -37,7 +37,7 @@ done
 
 # Check the overall test status and exit accordingly
 if [ "$all_passed" = true ]; then
-    docker cp custom_app:$(pwd)/.nyc_output $(pwd)/.nyc_output
+    docker cp node-express-graphql-template-app-1:$(pwd)/.nyc_output $(pwd)/.nyc_output
     npx nyc report
     echo "All tests passed"
     exit 0
