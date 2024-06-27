@@ -9,6 +9,8 @@ sudo chmod a+x keployE && sudo mkdir -p /usr/local/bin && sudo mv keployE /usr/l
 # Build the project locally
 echo "Project built successfully"
 
+echo $(pwd)
+
 
 sudo -E env PATH="$PATH" /usr/local/bin/keployE test -c "sudo docker compose --env-file .env.docker up" --containerName "node-express-graphql-template-app-1" --delay 30 --apiTimeout 30 --generateGithubActions=false --coverage=true
 echo "Keploy started in test mode"
