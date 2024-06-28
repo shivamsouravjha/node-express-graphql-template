@@ -55,6 +55,7 @@ export const init = async () => {
   }
 
   if (process.env.ENABLE_DEDUP) {
+    console.log('Dedup is enabled');
     const kMiddleware = require('@keploy/sdk/dist/v2/dedup/middleware.js');
     app.use(kMiddleware());
   }
